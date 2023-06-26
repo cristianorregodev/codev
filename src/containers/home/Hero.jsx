@@ -2,7 +2,7 @@ import { Button } from '@/components/Button'
 import Image from 'next/image'
 export const Hero = () => {
     return (
-        <section className="relative container pt-20 h-screen overflow-hidden lg:px-20 mx-auto grid place-items-center md:grid-cols-2 ">
+        <section className="relative mx-auto container pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-20">
             <div className="text-center md:text-left">
                 <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl text-primary-500 dark:text-primary-400">
                     Cristian Orrego Dev
