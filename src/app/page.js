@@ -1,8 +1,11 @@
-import { Hero } from '@/containers/Home/Hero'
+import { About } from '@/components/Home/About'
+import { Banner } from '@/components/Home/Banner'
+
 export default function Home() {
     return (
         <>
-            <Hero />
+            <Banner />
+            <About />
         </>
     )
 }

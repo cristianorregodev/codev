@@ -1,16 +1,16 @@
-import { Button } from '@/components/Button'
+import { Button } from '../Button'
 import Image from 'next/image'
-export const Hero = () => {
+export const Banner = () => {
     return (
-        <section className="relative mx-auto container pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-20">
+        <section className="relative mx-auto container px-2 pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-20">
             <div className="text-center md:text-left">
                 <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl text-primary-500 dark:text-primary-400">
                     Cristian Orrego Dev
                 </h1>
-                <h2 className="text-lg font-semibold lg:text-xl xl:text-2xl text-dark-600 dark:text-dark-200">
+                <h2 className="text-lg font-semibold lg:text-xl xl:text-2xl text-dark-700 dark:text-dark-200">
                     Fullstack Developer
                 </h2>
-                <p className="lg:text-lg mt-4 text-dark-600 dark:text-dark-200">
+                <p className="lg:text-lg mt-4 text-dark-700 dark:text-dark-200">
                     Bienvenido a mi sitio web, donde podrás echar un vistazo a mi trabajo, experiencia en desarrollo web
                     y algunos artículos sobre programación.
                 </p>
