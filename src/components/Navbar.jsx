@@ -1,12 +1,15 @@
 'use client'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { NavLink } from './NavLink'
 import { FaLinkedinIn, FaGithub, FaYoutube } from 'react-icons/fa'
+import { ThemeSwitch } from './ThemeSwich'
 
 export const Navbar = () => {
     const navRef = useRef()
+    const [isOpen, setIsOpen] = useState(false)
     const showNavBar = () => {
         navRef.current.classList.toggle('hidden')
+        setIsOpen(!isOpen)
     }
     return (
         <header className="backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 fixed w-full z-20 top-0 left-0">
@@ -18,11 +21,11 @@ export const Navbar = () => {
                     codev
                 </a>
                 <div className="md:order-2">
-                    <ul className="hidden md:flex md:space-x-8 ">
+                    <ul className="hidden md:flex md:space-x-8 items-center ">
                         <li>
                             <a
                                 href="#"
-                                className="text-dark-700 hover:text-dark-900 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
+                                className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
                             >
                                 <FaLinkedinIn />
                             </a>
@@ -30,7 +33,7 @@ export const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-dark-700 hover:text-dark-900 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
+                                className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
                             >
                                 <FaGithub />
                             </a>
@@ -38,31 +41,50 @@ export const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-dark-700 hover:text-dark-900 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
+                                className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
                             >
                                 <FaYoutube />
                             </a>
                         </li>
+                        <li>
+                            <ThemeSwitch />
+                        </li>
                     </ul>
-                    <button
-                        className="p-2 text-sm text-dark-700 dark:text-dark-200 rounded-lg md:hidden   "
-                        onClick={showNavBar}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="w-6 h-6"
+                    <div className="flex items-center">
+                        <ThemeSwitch show={false} />
+                        <button
+                            className="p-2 text-sm text-dark-700 dark:text-dark-200 rounded-lg md:hidden"
+                            onClick={showNavBar}
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                            />
-                        </svg>
-                    </button>
+                            {isOpen ? (
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="w-6 h-6"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="w-6 h-6"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                                    />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
                 </div>
                 <div
                     ref={navRef}

@@ -5,7 +5,7 @@ export const Button = ({ children, primary = false, link = '#' }) => {
         return (
             <a
                 href={link}
-                className="px-6 py-2 font-bold relative z-10 overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:rounded-xl before:bg-primary-500 before:-z-10 before:transition-all before:duration-300 before:hover:w-full text-dark-100 bg-dark-800 rounded-xl hover:bg-dark-600 hover:shadow-md hover:shadow-primary-500/50 ease duration-500"
+                className="px-6 py-2 font-bold relative z-10 overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:rounded-xl before:bg-primary-600 before:-z-10 before:transition-all before:duration-300 before:hover:w-full text-dark-100 bg-dark-800 rounded-xl hover:bg-dark-600 hover:shadow-md hover:shadow-primary-500/50 ease duration-500"
             >
                 {children}
             </a>
@@ -13,7 +13,7 @@ export const Button = ({ children, primary = false, link = '#' }) => {
     return (
         <a
             href={link}
-            className="px-6 py-2 font-bold relative z-10 overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:rounded-xl before:bg-dark-800 before:-z-10 before:transition-all before:duration-300 before:hover:w-full text-dark-100 bg-primary-500 rounded-xl hover:bg-dark-600 hover:shadow-md hover:shadow-dark-500/50 ease duration-500"
+            className="px-6 py-2 font-bold relative z-10 overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:rounded-xl before:bg-dark-800 before:-z-10 before:transition-all before:duration-300 before:hover:w-full text-dark-100 bg-primary-600 rounded-xl hover:bg-dark-600 hover:shadow-md hover:shadow-dark-500/50 ease duration-500"
         >
             {children}
         </a>

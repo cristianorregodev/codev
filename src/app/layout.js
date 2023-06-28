@@ -1,4 +1,5 @@
 import { Navbar } from '@/components/Navbar'
+import { DarkModeProvider } from './providers/DarkModeProvider'
 import './globals.css'
 
 export const metadata = {
@@ -8,10 +9,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className="dark">
+        <html suppressHydrationWarning lang="en">
             <body className="bg-dark-50 dark:bg-dark-950">
-                <Navbar />
-                {children}
+                <DarkModeProvider>
+                    <Navbar />
+                    {children}
+                </DarkModeProvider>
             </body>
         </html>
     )

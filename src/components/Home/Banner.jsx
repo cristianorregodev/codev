@@ -4,7 +4,7 @@ export const Banner = () => {
     return (
         <section className="relative mx-auto container px-2 pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-20">
             <div className="text-center md:text-left">
-                <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl text-primary-500 dark:text-primary-400">
+                <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl text-primary-600 dark:text-primary-400">
                     Cristian Orrego Dev
                 </h1>
                 <h2 className="text-lg font-semibold lg:text-xl xl:text-2xl text-dark-700 dark:text-dark-200">
