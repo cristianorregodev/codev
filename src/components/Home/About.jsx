@@ -3,7 +3,7 @@ import { AiOutlineFileProtect } from 'react-icons/ai'
 
 export const About = () => {
     return (
-        <section className="container mx-auto px-2 py-20 lg:px-20" id="about">
+        <section className="container mx-auto px-2 pt-20 lg:px-20" id="about">
             <h2 className="text-3xl font-bold text-primary-600 dark:text-primary-400">Sobre mí</h2>
             <div className="md:grid md:grid-cols-2 md:place-items-center pt-12 md:pt-2">
                 <div className="md:w-full">
@@ -49,9 +49,6 @@ export const About = () => {
                             </span>
                             <h3 className="flex items-center mb-1 text-lg font-semibold text-dark-700 dark:text-dark-200">
                                 Programador FullStack{' '}
-                                <span className="bg-primary-100 text-dark-700 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-dark-200 ml-3">
-                                    Latest
-                                </span>
                             </h3>
                             <time className="block mb-2 text-sm font-normal leading-none text-dark-500 dark:text-dark-400">
                                 Enero 2022 - Presente
@@ -81,7 +78,7 @@ export const About = () => {
                             <h3 className="flex items-center mb-1 text-lg font-semibold text-dark-700 dark:text-dark-200">
                                 Web master{' '}
                             </h3>
-                            <time className="block mb-2 text-sm font-normal leading-none text-dark-400 dark:text-dark-500">
+                            <time className="block mb-2 text-sm font-normal leading-none text-dark-500 dark:text-dark-400">
                                 Febrero 2020 - Noviembre 2021
                             </time>
                             <p className="mb-4 text-base font-normal text-dark-700 dark:text-dark-200">
@@ -109,7 +106,7 @@ export const About = () => {
                             <h3 className="flex items-center mb-1 text-lg font-semibold text-dark-700 dark:text-dark-200">
                                 Primer proyecto para producción{' '}
                             </h3>
-                            <time className="block mb-2 text-sm font-normal leading-none text-dark-400 dark:text-dark-500">
+                            <time className="block mb-2 text-sm font-normal leading-none text-dark-500 dark:text-dark-400">
                                 Septiembre 2019
                             </time>
                             <p className="mb-4 text-base font-normal text-dark-700 dark:text-dark-200">
@@ -137,7 +134,7 @@ export const About = () => {
                             <h3 className="flex items-center mb-1 text-lg font-semibold text-dark-700 dark:text-dark-200">
                                 Aprendizaje autónomo{' '}
                             </h3>
-                            <time className="block mb-2 text-sm font-normal leading-none text-dark-400 dark:text-dark-500">
+                            <time className="block mb-2 text-sm font-normal leading-none text-dark-500 dark:text-dark-400">
                                 2018 - 2019
                             </time>
                             <p className="mb-4 text-base font-normal text-dark-700 dark:text-dark-200">

@@ -3,6 +3,8 @@ import { useRef, useState } from 'react'
 import { NavLink } from './NavLink'
 import { FaLinkedinIn, FaGithub, FaYoutube } from 'react-icons/fa'
 import { ThemeSwitch } from './ThemeSwich'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export const Navbar = () => {
     const navRef = useRef()
@@ -14,12 +16,13 @@ export const Navbar = () => {
     return (
         <header className="backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 fixed w-full z-20 top-0 left-0">
             <nav className="container px-2 lg:px-20 flex flex-wrap items-center justify-between mx-auto py-4">
-                <a
-                    href="#"
-                    className="self-center text-2xl font-bold whitespace-nowrap text-primary-500 dark:text-primary-400"
+                <Link
+                    href="/"
+                    className="flex gap-2 items-center self-center text-3xl font-bold whitespace-nowrap text-primary-600 dark:text-primary-400"
                 >
+                    <Image src={'/images/logo.svg'} width={40} height={40} alt="logo" />
                     codev
-                </a>
+                </Link>
                 <div className="md:order-2">
                     <ul className="hidden md:flex md:space-x-8 items-center ">
                         <li>

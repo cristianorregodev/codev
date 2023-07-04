@@ -21,11 +21,11 @@ export const Banner = () => {
             </div>
             <div className="Hero-image flex justify-center">
                 <Image
-                    src={'/images/picture.png'}
+                    src={'/images/photo.webp'}
                     width={450}
                     height={450}
                     alt="Person"
-                    className="drop-shadow-lg saturate-150"
+                    className="drop-shadow-lg saturate-200 "
                 />
             </div>
             <button className="absolute hidden md:flex gap-2 justify-center bottom-4 animate-bounce text-primary-500 dark:text-primary-400 font-bold">
