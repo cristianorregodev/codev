@@ -3,7 +3,7 @@ import { AiOutlineFileProtect } from 'react-icons/ai'
 
 export const About = () => {
     return (
-        <section className="container mx-auto px-2 pt-20 lg:px-20" id="about">
+        <section className="container mx-auto px-2 pt-20 lg:px-32" id="about">
             <h2 className="text-3xl font-bold text-primary-600 dark:text-primary-400">Sobre mí</h2>
             <div className="md:grid md:grid-cols-2 md:place-items-center pt-12 md:pt-2">
                 <div className="md:w-full">

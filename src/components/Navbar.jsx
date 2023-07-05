@@ -15,7 +15,7 @@ export const Navbar = () => {
     }
     return (
         <header className="backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 fixed w-full z-20 top-0 left-0">
-            <nav className="container px-2 lg:px-20 flex flex-wrap items-center justify-between mx-auto py-4">
+            <nav className="container px-2 lg:px-32 flex flex-wrap items-center justify-between mx-auto py-4">
                 <Link
                     href="/"
                     className="flex gap-2 items-center self-center text-3xl font-bold whitespace-nowrap text-primary-600 dark:text-primary-400"

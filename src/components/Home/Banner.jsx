@@ -2,7 +2,7 @@ import { Button } from '../Button'
 import Image from 'next/image'
 export const Banner = () => {
     return (
-        <section className="relative mx-auto container px-2 pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-20">
+        <section className="relative mx-auto container px-2 pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-32">
             <div className="text-center md:text-left">
                 <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl text-primary-600 dark:text-primary-400">
                     Cristian Orrego Dev
