@@ -16,7 +16,7 @@ export const About = () => {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className=" md:w-11/12 rounded-xl shadow-lg shadow-dark-900/20 dark:shadow-dark-50/10"
                     />
-                    <p className="mt-8 text-dark-700 dark:text-dark-200 text-justify md:w-11/12">
+                    <p className="mt-8 text-dark-700 dark:text-dark-200 md:w-11/12">
                         Hola 👋, soy profesional en{' '}
                         <span className="font-bold text-primary-600 dark:text-primary-400">Ingeniería en Sistemas</span>{' '}
                         y{' '}
