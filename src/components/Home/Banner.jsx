@@ -11,8 +11,8 @@ export const Banner = () => {
                     Fullstack Developer
                 </h2>
                 <p className="lg:text-lg mt-4 text-dark-700 dark:text-dark-200">
-                    Bienvenido a mi sitio web, donde podrás echar un vistazo a mi trabajo, experiencia en desarrollo web
-                    y algunos artículos sobre programación.
+                    Bienvenido a mi sitio web, aquí comparto información sobre mi trabajo, experiencia y algunos
+                    artículos sobre programación.
                 </p>
                 <div className="mt-8 flex gap-6 justify-center md:justify-start">
                     <Button primary={true}>Proyectos</Button>
