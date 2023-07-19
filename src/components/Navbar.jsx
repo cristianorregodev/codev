@@ -95,16 +95,16 @@ export const Navbar = () => {
                 >
                     <ul className="flex flex-col gap-6 p-4 md:p-0 mt-4 font-medium  md:flex-row  md:mt-0 md:border-0 ">
                         <li className="text-center">
-                            <NavLink label={'Inicio'} />
+                            <NavLink label={'Inicio'} link={'/'} />
                         </li>
                         <li className="text-center">
-                            <NavLink label={'Experiencia'} />
+                            <NavLink label={'Experiencia'} link={'/#experience'} />
                         </li>
                         <li className="text-center">
-                            <NavLink label={'Proyectos'} />
+                            <NavLink label={'Proyectos'} link={'/projects'} />
                         </li>
                         <li className="text-center">
-                            <NavLink label={'Artículos'} />
+                            <NavLink label={'Artículos'} link={'/articles'} />
                         </li>
                     </ul>
                     <ul className="flex justify-center space-x-8 my-4 md:hidden">

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
 body::before {
     content: '';
     background: rgba(0, 153, 255, 0.24);

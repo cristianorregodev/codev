@@ -3,7 +3,7 @@ import { AiOutlineFileProtect } from 'react-icons/ai'
 
 export const About = () => {
     return (
-        <section className="container mx-auto px-2 pt-20 lg:px-32" id="about">
+        <section className="container mx-auto px-2 pt-20 lg:px-32" id="experience">
             <h2 className="text-3xl font-bold text-primary-600 dark:text-primary-400">Sobre mí</h2>
             <div className="md:grid md:grid-cols-2 md:place-items-center pt-12 md:pt-2">
                 <div className="md:w-full">
@@ -14,9 +14,9 @@ export const About = () => {
                         alt={'Programador de frente con espacio de trabajo de fondo'}
                         loading="lazy"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="rounded-xl shadow-lg shadow-dark-900/20 dark:shadow-dark-50/10"
+                        className=" md:w-11/12 rounded-xl shadow-lg shadow-dark-900/20 dark:shadow-dark-50/10"
                     />
-                    <p className="mt-8 text-dark-700 dark:text-dark-200 text-justify md:pr-12">
+                    <p className="mt-8 text-dark-700 dark:text-dark-200 text-justify md:w-11/12">
                         Hola 👋, soy profesional en{' '}
                         <span className="font-bold text-primary-600 dark:text-primary-400">Ingeniería en Sistemas</span>{' '}
                         y{' '}

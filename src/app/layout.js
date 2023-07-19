@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/Navbar'
 import { DarkModeProvider } from './providers/DarkModeProvider'
 import './globals.css'
+import { Footer } from '@/components/Footer'
 
 export const metadata = {
     title: 'Cristian Orrego 👨‍💻 | FullStack, React, Next, Laravel, NodeJS, Desarrollo',
@@ -10,11 +11,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html suppressHydrationWarning lang="en">
-            <body className="bg-dark-50 dark:bg-dark-950">
+        <html suppressHydrationWarning lang="en" className="scroll-smooth">
+            <body className="bg-dark-50 dark:bg-dark-950 ">
                 <DarkModeProvider>
                     <Navbar />
                     {children}
+                    <Footer />
                 </DarkModeProvider>
             </body>
         </html>

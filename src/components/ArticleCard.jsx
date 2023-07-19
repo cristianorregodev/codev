@@ -1,7 +1,9 @@
+import Link from 'next/link'
+
 export const ArticleCard = ({ article }) => {
     return (
-        <a href="#" className="w-full">
-            <article className="p-2 md:p-4 bg-dark-50 border hover:bg-dark-100 dark:hover:bg-dark-950 border-dark-100 rounded-lg shadow dark:bg-dark-900 dark:border-dark-700 transition-colors duration-300">
+        <Link href={`/articles`} className="w-full">
+            <article className="p-2 md:p-4 bg-dark-50 border hover:scale-[1.02] hover:bg-dark-100 dark:hover:bg-dark-950 border-dark-100 rounded-lg shadow dark:bg-dark-900 dark:border-dark-700 transition-all duration-300">
                 <div className="flex justify-between text-dark-700 dark:text-dark-200">
                     <span className="text-sm">
                         {new Date(article.date).toLocaleDateString('es-co', {
@@ -25,6 +27,6 @@ export const ArticleCard = ({ article }) => {
                     ))}
                 </ul>
             </article>
-        </a>
+        </Link>
     )
 }
