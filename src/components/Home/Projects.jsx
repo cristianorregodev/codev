@@ -9,7 +9,7 @@ export const Projects = async () => {
     const { data } = await getData(`${API_URL}/projects`)
     const projects = data.slice(0, 3)
     return (
-        <section className="container mx-auto px-2 pt-20 lg:px-32">
+        <section className="container mx-auto px-2 pt-20 lg:px-52" id="projects-section">
             <SectionTitle>Proyectos</SectionTitle>
             <p className="mt-6 text-dark-700 dark:text-dark-200 text-justify">
                 Mis proyectos más emocionantes y creativos. Cada proyecto es el resultado de mi dedicación y pasión por
@@ -26,7 +26,7 @@ export const Projects = async () => {
                     className="flex justify-center items-center gap-2 text-dark-800 font-bold dark:text-dark-200 relative overflow-hidden z-10   before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-dark-900 dark:before:bg-dark-50 before:rounded-lg   before:-z-10 before:transition-all before:duration-500 before:hover:w-full  transition-all duration-300  hover:text-dark-900  dark:hover:text-dark-50"
                     href="/projects"
                 >
-                    Todos los proyectos <AiOutlineArrowRight />
+                    Más proyectos <AiOutlineArrowRight />
                 </Link>
             </div>
         </section>

@@ -16,3 +16,108 @@ body::before {
     top: 100px;
     z-index: -1;
 }
+#article-body h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0891b2;
+    margin: 10px 0;
+}
+#article-body figure {
+    margin: 16px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#article-body pre {
+    margin-bottom: 26px;
+}
+
+#article-body p {
+    font-size: 18px;
+    color: #334155;
+    margin-bottom: 20px;
+}
+#article-body p > a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#article-body p > strong {
+    color: #0891b2;
+}
+
+.dark #article-body h2 {
+    color: #22d3ee;
+}
+.dark #article-body p {
+    color: #e2e8f0;
+}
+
+.dark #article-body p > strong {
+    color: #22d3ee;
+}
+
+#article-body figure.table {
+    margin: 0;
+}
+#article-body table {
+    border-radius: 10px;
+    padding: 12px;
+    margin: 30px auto;
+    max-width: 100%;
+    border: solid 1px #0891b2;
+    border-collapse: unset;
+}
+
+#article-body table tr {
+    height: 24px;
+}
+
+#article-body table tr:first-child {
+    color: #0891b2;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#article-body table td {
+    padding: 10px 20px;
+}
+#article-body table td a {
+    color: #0891b2;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+#article-body table td a:hover {
+    text-decoration: underline;
+}
+
+.dark #article-body table {
+    border: solid 1px #22d3ee;
+}
+.dark #article-body table tr:first-child {
+    color: #22d3ee;
+}
+.dark #article-body table td a {
+    color: #22d3ee;
+}
+
+#article-body ul {
+    list-style: inside;
+    color: #334155;
+    font-size: 18px;
+}
+#article-body ul a {
+    text-decoration: underline;
+}
+#article-body ul strong {
+    color: #0891b2;
+}
+
+.dark #article-body ul {
+    list-style: inside;
+    color: #e2e8f0;
+    font-size: 18px;
+}
+
+.dark #article-body ul strong {
+    color: #22d3ee;
+}

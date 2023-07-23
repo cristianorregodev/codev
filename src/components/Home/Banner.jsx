@@ -2,7 +2,7 @@ import { Button } from '../Button'
 import Image from 'next/image'
 export const Banner = () => {
     return (
-        <section className="relative mx-auto container px-2 pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-32">
+        <section className="relative mx-auto container px-2 pt-20 h-screen overflow-hidden grid place-items-center md:grid-cols-2 md:pt-0 lg:px-52">
             <div className="text-center md:text-left">
                 <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl text-primary-600 dark:text-primary-400">
                     Cristian Orrego Dev
@@ -15,8 +15,10 @@ export const Banner = () => {
                     artículos sobre programación.
                 </p>
                 <div className="mt-8 flex gap-6 justify-center md:justify-start">
-                    <Button primary={true}>Proyectos</Button>
-                    <Button>Artículos</Button>
+                    <Button primary={true} link="#projects-section">
+                        Proyectos
+                    </Button>
+                    <Button link="#articles-section">Artículos</Button>
                 </div>
             </div>
             <div className="Hero-image flex justify-center">
@@ -28,7 +30,10 @@ export const Banner = () => {
                     className="drop-shadow-lg saturate-200 "
                 />
             </div>
-            <button className="absolute hidden md:flex gap-2 justify-center bottom-4 animate-bounce text-primary-500 dark:text-primary-400 font-bold">
+            <a
+                href="#experience"
+                className="absolute hidden md:flex gap-2 justify-center bottom-4 animate-bounce text-primary-500 dark:text-primary-400 font-bold"
+            >
                 scroll{' '}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +49,7 @@ export const Banner = () => {
                         d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
                     />
                 </svg>
-            </button>
+            </a>
         </section>
     )
 }
