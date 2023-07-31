@@ -32,23 +32,19 @@ export const ThemeSwitch = ({ show = true }) => {
     }
 
     return (
-        <div
-            className={`bg-dark-300 dark:bg-dark-700 p-1 rounded-md hover:bg-dark-700 dark:hover:bg-dark-300 transition-colors duration-300 ${
-                !show && 'md:hidden'
-            }`}
-        >
+        <button className={`bg-dark-300 dark:bg-dark-700 p-1 rounded-md  ${!show && 'md:hidden'}`}>
             {currentTheme === 'dark' ? (
                 <IoMdSunny
                     size={20}
-                    className="text-dark-700 hover:text-dark-300 dark:text-dark-300 dark:hover:text-dark-700 transition-colors duration-300 cursor-pointer"
+                    className="text-dark-700 hover:text-dark-500 dark:text-dark-300 dark:hover:text-dark-500 transition-colors duration-300 cursor-pointer"
                     onClick={() => setTheme('light')}
                 />
             ) : (
                 <IoMdMoon
-                    className="text-dark-700 hover:text-dark-300 dark:text-dark-300 dark:hover:text-dark-700 transition-colors duration-300 cursor-pointer"
+                    className="text-dark-700 hover:text-dark-500 dark:text-dark-300 dark:hover:text-dark-700 transition-colors duration-300 cursor-pointer"
                     onClick={() => setTheme('dark')}
                 />
             )}
-        </div>
+        </button>
     )
 }

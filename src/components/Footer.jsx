@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <footer className="container mx-auto px-2 lg:px-52 mt-14 mb-8">
+        <footer className="container mx-auto px-2 lg:px-28 2xl:px-52 mt-14 mb-8">
             <div className="rounded-lg border-dark-100 dark:border-dark-700 shadow dark:shadow-dark-700 mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between ">
                 <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                     <a href="https://flowbite.com/" className="hover:underline">

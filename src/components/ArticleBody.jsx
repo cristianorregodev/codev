@@ -11,7 +11,7 @@ export const ArticleBody = ({ data }) => {
     }, [])
 
     return (
-        <section className="container mx-auto px-2 lg:px-52 mt-10">
+        <section className="container mx-auto px-2 lg:px-22 xl:px-28 2xl:px-52 mt-10">
             <ul className="list-none grid md:grid-cols-4 mb-12">
                 <li className="flex gap-1 text-dark-700 dark:text-dark-200">
                     <svg

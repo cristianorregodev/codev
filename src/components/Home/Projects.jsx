@@ -4,19 +4,20 @@ import { SectionTitle } from '../SectionTitle'
 import { API_URL } from '@/config'
 import { ProjectCard } from '../ProjectCard'
 import Link from 'next/link'
+import { Container } from '../Container'
 
 export const Projects = async () => {
     const { data } = await getData(`${API_URL}/projects`)
     const projects = data.slice(0, 3)
     return (
-        <section className="container mx-auto px-2 pt-20 lg:px-52" id="projects-section">
+        <Container id="projects-section">
             <SectionTitle>Proyectos</SectionTitle>
             <p className="mt-6 text-dark-700 dark:text-dark-200 text-justify">
                 Mis proyectos más emocionantes y creativos. Cada proyecto es el resultado de mi dedicación y pasión por
                 la programación, y estoy encantado de compartirlos contigo. Descubre cómo transformo ideas en realidades
                 digitales. ¡Explora, inspira y crea con mis proyectos de software!
             </p>
-            <div className="mt-8 grid gap-4 place-items-center md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-14">
+            <div className="mt-8 grid gap-4 place-items-center md:grid-cols-2 md:gap-6 lg:grid-cols-3 ">
                 {projects.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
@@ -29,6 +30,6 @@ export const Projects = async () => {
                     Más proyectos <AiOutlineArrowRight />
                 </Link>
             </div>
-        </section>
+        </Container>
     )
 }

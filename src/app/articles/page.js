@@ -9,7 +9,7 @@ export default function ArticlesPage() {
     return (
         <>
             <Banner title={'Artículos de blog'} image={'/banner-one.svg'} />
-            <section className="container mx-auto mt-16 px-2 lg:px-52 grid gap-y-4">
+            <section className="container mx-auto mt-16 px-2 lg:px-22 xl:px-28 2xl:px-52 grid gap-y-4">
                 <ListOfArticles />
             </section>
         </>

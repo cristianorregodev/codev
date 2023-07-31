@@ -1,10 +1,11 @@
 import { experienceInfo } from '@/helpers/staticData'
 import Image from 'next/image'
 import { AiOutlineFileProtect } from 'react-icons/ai'
+import { Container } from '../Container'
 
 export const About = () => {
     return (
-        <section className="container mx-auto px-2 pt-20 lg:px-52" id="experience">
+        <Container id="experience">
             <h2 className="text-3xl font-bold text-primary-600 dark:text-primary-400">Sobre mí</h2>
             <div className="md:grid md:grid-cols-2 md:place-items-center pt-12 md:pt-2">
                 <div className="md:w-full">
@@ -75,6 +76,6 @@ export const About = () => {
                     Curriculum <AiOutlineFileProtect />
                 </a>
             </div>
-        </section>
+        </Container>
     )
 }
