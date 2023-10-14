@@ -2,11 +2,12 @@ import { experienceInfo } from '@/helpers/staticData'
 import Image from 'next/image'
 import { AiOutlineFileProtect } from 'react-icons/ai'
 import { Container } from '../Container'
+import { SectionTitle } from '../SectionTitle'
 
 export const About = () => {
     return (
         <Container id="experience">
-            <h2 className="text-3xl font-bold text-primary-600 dark:text-primary-400">Sobre mí</h2>
+            <SectionTitle>Experiencia</SectionTitle>
             <div className="md:grid md:grid-cols-2 md:place-items-center pt-12 md:pt-2">
                 <div className="md:w-full">
                     <Image
@@ -41,7 +42,7 @@ export const About = () => {
                                 <span className="absolute flex items-center justify-center w-6 h-6 bg-primary-200 rounded-full -left-3 ring-8 ring-dark-50 dark:ring-dark-950 dark:bg-dark-600">
                                     <svg
                                         aria-hidden="true"
-                                        className="w-4 h-4 text-primary-900 dark:text-primary-300"
+                                        className="w-4 h-4 text-primary-900 dark:text-primary-400"
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg"

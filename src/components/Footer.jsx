@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const Footer = () => {
     return (
         <footer className="container mx-auto px-2 lg:px-28 2xl:px-52 mt-14 mb-8">
@@ -9,24 +11,19 @@ export const Footer = () => {
                 </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                     <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6 ">
+                        <Link href="/" className="mr-4 hover:underline md:mr-6 ">
                             Inicio
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6">
+                        <Link href="/#experience" className="mr-4 hover:underline md:mr-6">
                             Experiencia
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6">
+                        <Link href="/projects" className="mr-4 hover:underline md:mr-6">
                             Proyectos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="hover:underline">
-                            Artículos
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

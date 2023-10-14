@@ -15,10 +15,10 @@ export const Banner = () => {
                     artículos sobre programación.
                 </p>
                 <div className="mt-8 flex gap-6 justify-center md:justify-start">
-                    <Button primary={true} link="#projects-section">
+                    <Button primary={true} link="#projects">
                         Proyectos
                     </Button>
-                    <Button link="#articles-section">Artículos</Button>
+                    <Button link="#experience">Curriculum</Button>
                 </div>
             </div>
             <div className="Hero-image flex justify-center">
@@ -31,7 +31,7 @@ export const Banner = () => {
                 />
             </div>
             <a
-                href="#experience"
+                href="#projects"
                 className="absolute hidden md:flex gap-2 justify-center bottom-4 animate-bounce text-primary-500 dark:text-primary-400 font-bold"
             >
                 scroll{' '}

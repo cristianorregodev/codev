@@ -12,8 +12,8 @@ export const ProjectCard = ({ project }) => {
                     {project.category}
                 </span>
                 <Image
-                    className="brightness-150 group-hover:scale-[1.03] group-hover:brightness-[2.3] transition-all duration-500 object-cover h-full"
-                    src={BASE_API_URL + project.cover}
+                    className=" group-hover:scale-[1.03]  transition-all duration-500 object-cover h-full"
+                    src={project?.content?.images?.mockup}
                     alt={project.title}
                     width={500}
                     height={500}
@@ -26,15 +26,14 @@ export const ProjectCard = ({ project }) => {
                 <h5 className="mb-2 text-xl font-bold tracking-tight text-primary-600 dark:text-primary-400">
                     {project.title}
                 </h5>
-                <div
-                    className="mb-3 font-normal text-dark-700 dark:text-dark-200 line-clamp-3"
-                    dangerouslySetInnerHTML={{ __html: project.abstract }}
-                ></div>
+                <p className="mb-3 font-normal text-dark-700 dark:text-dark-200 line-clamp-3">
+                    {project?.content?.description}
+                </p>
 
                 <h6 className="text-lg font-bold text-primary-600 dark:text-primary-400">Stack</h6>
-                <ul className="flex gap-1 flex-wrap  text-dark-700 dark:text-dark-200 mb-2">
-                    {project.technologies.map((item, idx) => (
-                        <li key={idx}>&middot; {item}</li>
+                <ul className="flex gap-1 flex-wrap  text-dark-700 dark:text-dark-200 mb-2 text-sm">
+                    {project?.content?.technologies.map((item, idx) => (
+                        <li key={idx}>&middot; {item.name}</li>
                     ))}
                 </ul>
             </div>

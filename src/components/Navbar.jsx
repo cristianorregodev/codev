@@ -15,7 +15,7 @@ export const Navbar = () => {
     }
     return (
         <header className="backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 fixed w-full z-20 top-0 left-0">
-            <nav className="container px-2 lg:px-22 xl:px-28 2xl:px-52 flex flex-wrap items-center justify-between mx-auto py-4">
+            <nav className="container px-2 lg:px-22 xl:px-28 2xl:px-52 flex flex-wrap items-center justify-between mx-auto py-4 ">
                 <Link
                     href="/"
                     className="flex gap-2 items-center self-center text-3xl font-bold whitespace-nowrap text-primary-600 dark:text-primary-400"
@@ -27,7 +27,8 @@ export const Navbar = () => {
                     <ul className="hidden md:flex md:space-x-8 items-center ">
                         <li>
                             <a
-                                href="#"
+                                href="https://www.linkedin.com/in/cristianorregod/"
+                                target="_blank"
                                 className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
                             >
                                 <FaLinkedinIn />
@@ -35,18 +36,11 @@ export const Navbar = () => {
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="https://github.com/cristianorregodev"
+                                target="_blank"
                                 className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
                             >
                                 <FaGithub />
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
-                            >
-                                <FaYoutube />
                             </a>
                         </li>
                         <li>
@@ -98,13 +92,10 @@ export const Navbar = () => {
                             <NavLink label={'Inicio'} link={'/'} />
                         </li>
                         <li className="text-center">
-                            <NavLink label={'Experiencia'} link={'/#experience'} />
-                        </li>
-                        <li className="text-center">
                             <NavLink label={'Proyectos'} link={'/projects'} />
                         </li>
                         <li className="text-center">
-                            <NavLink label={'Artículos'} link={'/articles'} />
+                            <NavLink label={'Experiencia'} link={'/#experience'} />
                         </li>
                     </ul>
                     <ul className="flex justify-center space-x-8 my-4 md:hidden">

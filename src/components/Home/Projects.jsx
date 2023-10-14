@@ -5,12 +5,21 @@ import { API_URL } from '@/config'
 import { ProjectCard } from '../ProjectCard'
 import Link from 'next/link'
 import { Container } from '../Container'
+import { PROJECTS } from '@/helpers/projects'
 
+const sorted = PROJECTS.sort((a, b) => {
+    if (a.date < b.date) {
+        return 1
+    }
+    if (a.date > b.date) {
+        return -1
+    }
+    // a must be equal to b
+    return 0
+}).slice(0, 3)
 export const Projects = async () => {
-    const { data } = await getData(`${API_URL}/projects`)
-    const projects = data.slice(0, 3)
     return (
-        <Container id="projects-section">
+        <Container id="projects">
             <SectionTitle>Proyectos</SectionTitle>
             <p className="mt-6 text-dark-700 dark:text-dark-200 text-justify">
                 Mis proyectos más emocionantes y creativos. Cada proyecto es el resultado de mi dedicación y pasión por
@@ -18,8 +27,8 @@ export const Projects = async () => {
                 digitales. ¡Explora, inspira y crea con mis proyectos de software!
             </p>
             <div className="mt-8 grid gap-4 place-items-center md:grid-cols-2 md:gap-6 lg:grid-cols-3 ">
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
+                {sorted.map((project) => (
+                    <ProjectCard key={project.slug} project={project} />
                 ))}
             </div>
             <div className="flex justify-center w-full mt-8">
