@@ -88,27 +88,29 @@ export const ProjectBody = ({ data }) => {
                         </li>
                     </ul>
                     <div className="flex gap-2">
-                        <a
-                            href={data?.link}
-                            target="_blank"
-                            className="flex items-center gap-1 text-primary-600 dark:text-primary-400 font-bold hover:underline transition-all duration-200"
-                        >
-                            Ir al sitio{' '}
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={1.5}
-                                stroke="currentColor"
-                                className="w-4 h-4"
+                        {data?.link && (
+                            <a
+                                href={data?.link}
+                                target="_blank"
+                                className="flex items-center gap-1 text-primary-600 dark:text-primary-400 font-bold hover:underline transition-all duration-200"
                             >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                                />
-                            </svg>
-                        </a>
+                                Ir al sitio{' '}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={1.5}
+                                    stroke="currentColor"
+                                    className="w-4 h-4"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                                    />
+                                </svg>
+                            </a>
+                        )}
                         {data?.repo && (
                             <a
                                 href={data?.repo}
@@ -174,6 +176,15 @@ export const ProjectBody = ({ data }) => {
                         </tbody>
                     </table>
                 </figure>
+                <section className="mb-6">
+                    <h2>Características principales</h2>
+                    <p>{data?.content?.features?.intro}</p>
+                    <ul>
+                        {data?.content?.features?.list.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                        ))}
+                    </ul>
+                </section>
 
                 <h2>Galeria</h2>
                 <section className="grid md:grid-cols-2  gap-4">

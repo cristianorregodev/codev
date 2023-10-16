@@ -16,14 +16,13 @@ export const PROJECTS = [
                 { name: 'JavaScript', use: 'Tecnología del lado del cliente' },
                 { name: 'ReactJS', use: 'Librería usada para trabajar con JavaScript (Frontend)' },
             ],
-            functions: {
+            features: {
                 intro: '',
                 list: [
-                    'Agregar a favoritos',
-                    'Filtro por ciduad',
-                    'Filtro por estado',
-                    'Filtro por precio',
-                    'Visualizar detalles de inmueble',
+                    'Sisema de favoritos: Permite al usuario guardar inmueble en una sección de favoritos.',
+                    'Filtro básico: Permite al usuario realizar búsquedas mediante filtro básico de precio, ciudad y estado.',
+                    'Filtro avanzado: Permite al usuario realizar búsquedas mediante filtro avanzado de precio, ciudad, estado, tipo de inmueble, área y número de baños.',
+                    'Detalles de inmueble: Permite al usuario visualizar los detalles de un inmueble',
                 ],
             },
             images: {
@@ -59,14 +58,12 @@ export const PROJECTS = [
                 },
                 { name: 'JavaScript', use: 'Tecnología del lado del cliente' },
             ],
-            functions: {
-                intro: '',
+            features: {
+                intro: 'Principales característias y funcionalidades del proyecto.',
                 list: [
-                    'Agregar a favoritos',
-                    'Filtro por ciduad',
-                    'Filtro por estado',
-                    'Filtro por precio',
-                    'Visualizar detalles de inmueble',
+                    'Imagen corporativa: Muestra al público objetivo una identidad de marca que se evidencia en logos y colores.',
+                    'Geolocalización: Mediante la IP del cliente detecta su país de origen y en base a el, muestra información relevante.',
+                    'Simulación de crédito: Permite al usuario generar una simulación de crédito para poder realizar una compra de un inmueble.',
                 ],
             },
             images: {
@@ -101,7 +98,7 @@ export const PROJECTS = [
                 },
                 { name: 'NodeJS', use: 'Configuración del servidor web.' },
             ],
-            functions: {
+            features: {
                 intro: 'Esta aplicación consiste en un login sencillo mediante el cual accede a las principales de funciones que le permiten hacer consultas a modelos de inteligencia articial.',
                 list: [
                     'Autenticación: Sistema que permite al usuario crear una nueva cuenta o inciar sesión con una cuenta existente.',
@@ -143,7 +140,7 @@ export const PROJECTS = [
                 },
                 { name: 'GraphQL', use: 'Para la interacción con los datos de la API' },
             ],
-            functions: {
+            features: {
                 intro: 'La apllicación al estar conectada con un backend cuenta con diferentes funcones, listaré a continuación algunas de ellas.',
                 list: [
                     'Autenticvación: Sistema que permite al usuario crear una nueva cuenta o inciar sesión con una cuenta existente.',
@@ -160,5 +157,46 @@ export const PROJECTS = [
         },
         link: 'https://instapets-mu.vercel.app/',
         repo: 'https://github.com/cristianorregodev/instapets',
+    },
+    {
+        title: 'CMS de inmuebles',
+        slug: 'cms-inmuebles',
+        category: 'Backend',
+        date: '2021-07-23',
+        content: {
+            abstract:
+                'Este proyecto tiene como objetivo brindar a los usuarios, ya sean desarrolladores externos o administradores de contenidos, una solución completa y eficiente para la gestión de inmuebles. A través de la combinación de Laravel y MySQL, se logra desarrollar un sistema de alta calidad que potenciará la administración y promoción de propiedades de manera efectiva.',
+            description:
+                'En este emocionante proyecto, me embarqué en la creación de un sistema integral de gestión de inmuebles. La misión es desarrollar un sólido API REST y un potente Sistema de Gestión de Contenidos (CMS) que permitan a los usuarios listar, buscar y administrar propiedades de manera eficiente y efectiva.',
+            technologies: [
+                {
+                    name: 'Laravel',
+                    use: 'Framework de desarrollo de aplicaciones web',
+                },
+                { name: 'MySQL', use: 'Gestion de base de datos' },
+                {
+                    name: 'Blade',
+                    use: 'Motor de plantillas HTML',
+                },
+                { name: 'PHP', use: 'Lenguaje de programación del lado del servidor' },
+            ],
+            features: {
+                intro: 'Estas son algunas de las principales caracerísticas y funcionaldiad del proyecto.',
+                list: [
+                    'API REST de Inmuebles: Desarrollaremos un API REST robusto basado en Laravel que permitirá acceder y gestionar datos de inmuebles de manera sencilla.',
+                    'CMS de Inmuebles: El sistema gestión de contenidos personalizado utilizando Laravel, ofrecerá una interfaz intuitiva para que los administradores puedan agregar, editar y eliminar listados de propiedades.',
+                    'Base de Datos MySQL: Se garantiza un rendimiento óptimo y la capacidad de almacenar grandes volúmenes de información sobre propiedades.',
+                    'Autenticación y Seguridad: Medidas de seguridad sólidas, incluyendo autenticación de usuarios y autorizaciones, para garantizar que los datos de inmuebles estén protegidos y accesibles solo para usuarios autorizados.',
+                ],
+            },
+            images: {
+                cover: '/images/cms-vc/cover.png',
+                mockup: '/images/cms-vc/mockup.png',
+                responsive: '/images/cms-vc/responsive.png',
+                screenshot: '/images/cms-vc/screenshot.png',
+            },
+        },
+        link: '',
+        repo: '',
     },
 ]
