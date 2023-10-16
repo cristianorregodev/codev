@@ -10,7 +10,7 @@ export const metadata = {
     openGraph: {
         title: 'Cristian Orrego 👨‍💻 | FullStack, React, Next, Laravel, NodeJS, Desarrollo',
         description:
-            'Hola 👋, soy Cristian Orrego, Ingeniería en Sistemas y Desarrollador FullStack con más de 3 años de experiencia. Este es mi portafolio personal, te invito a que conozcas un poco sobre mi trabajo.',
+            'Hola 👋, soy Cristian Orrego, Ingeniero de Sistemas y Desarrollador FullStack con más de 3 años de experiencia. Este es mi portafolio personal, te invito a que conozcas un poco sobre mi trabajo.',
         images: ['/images/og.png'],
         siteName: 'cristianorrego.dev',
         type: 'website',
