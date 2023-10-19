@@ -1,31 +1,37 @@
+import { LocalDate } from '@/lib/local-date'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const ArticleCard = ({ article }) => {
     return (
-        <Link href={`/articles/${article.slug}`} className="w-full">
-            <article className="p-2 md:p-4 bg-dark-50 border hover:scale-[1.02] hover:bg-dark-100 dark:hover:bg-dark-950 border-dark-100 rounded-lg shadow dark:bg-dark-900 dark:border-dark-700 transition-all duration-300">
-                <div className="flex justify-between text-dark-700 dark:text-dark-200">
-                    <span className="text-sm">
-                        {new Date(article.date).toLocaleDateString('es-co', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: '2-digit',
-                        })}
-                    </span>
-                    <span className="bg-dark-700 dark:bg-dark-300 rounded-lg px-2 text-dark-200 dark:text-dark-700 text-sm font-semibold">
-                        {article.category}
-                    </span>
-                </div>
-                <h1 className="text-primary-600 dark:text-primary-400 font-semibold text-lg tracking-tight">
-                    {article.title}
-                </h1>
-                <ul className="flex flex-wrap gap-x-2 text-dark-700 dark:text-dark-300 text-sm">
-                    {article.tags.map((tag) => (
-                        <li key={tag.id} className="italic">
-                            #{tag.name}
-                        </li>
-                    ))}
-                </ul>
+        <Link href={`/posts/${article.slug}`} className="w-full">
+            <article className="grid grid-cols-[1fr,2fr] gap-3 p-2 items-center lg:grid-cols-1 md:p-4 bg-dark-50  hover:scale-[1.02] hover:bg-dark-100 dark:hover:bg-dark-950 rounded-lg shadow dark:bg-dark-900  transition-all duration-300">
+                <header>
+                    <Image
+                        src={article?.cover}
+                        alt={article?.title}
+                        width={1000}
+                        height={1000}
+                        className="rounded-xl"
+                    />
+                </header>
+                <section className=" text-dark-700 dark:text-dark-200 grid ">
+                    <h1 className="text-primary-600 dark:text-primary-400 font-bold text-base tracking-tight mb-2 lg:text-lg">
+                        {article.title}
+                    </h1>
+                    <p className="hidden lg:visible text-sm text-dark-700 dark:text-dark-200 lg:line-clamp-2 lg:text-lg ">
+                        {article?.description}
+                    </p>
+
+                    <footer className="pt-2">
+                        <span className="bg-dark-200 dark:bg-dark-700 rounded px-2 py-0.5 text-sm mr-2">
+                            {new LocalDate().relativeTime(article?.date)}
+                        </span>
+                        <span className="bg-dark-200 dark:bg-dark-700 rounded px-2 py-0.5 text-dark-700 dark:text-dark-200 text-sm ">
+                            {article.tags}
+                        </span>
+                    </footer>
+                </section>
             </article>
         </Link>
     )

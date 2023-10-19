@@ -1,5 +1,3 @@
-import { API_URL } from '@/config'
-import { getData } from '@/services/getData'
 import { ProjectCard } from '../ProjectCard'
 import { PROJECTS } from '@/helpers/projects'
 

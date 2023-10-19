@@ -23,7 +23,7 @@ body::before {
     right: 0;
     top: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, transparent 0%, rgba(25, 28, 31, 0.411) 80%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(7, 64, 121, 0.781) 80%);
     z-index: 1;
 }
 #article-body h2 {
@@ -112,9 +112,13 @@ body::before {
 }
 
 #article-body ul {
-    list-style: inside;
+    list-style: disc;
     color: #334155;
     font-size: 18px;
+    margin-left: 20px;
+}
+.dark #article-body ul {
+    list-style: disc !important;
 }
 #article-body ul a {
     text-decoration: underline;

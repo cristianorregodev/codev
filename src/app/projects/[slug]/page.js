@@ -5,6 +5,10 @@ export function generateMetadata({ params }) {
     const { slug } = params
     const project = PROJECTS.find((project) => project.slug === slug)
     return {
+        metadataBase: new URL('https://cristianorrego.dev'),
+        alternats: {
+            canonical: `/projects`,
+        },
         title: `Cristian Orrego Dev 👨‍💻 | ${project.title}`,
         description: project?.content?.abstract,
         openGraph: {

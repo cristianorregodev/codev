@@ -97,6 +97,9 @@ export const Navbar = () => {
                         <li className="text-center">
                             <NavLink label={'Experiencia'} link={'/#experience'} />
                         </li>
+                        <li className="text-center">
+                            <NavLink label={'Blog'} link={'/posts'} />
+                        </li>
                     </ul>
                     <ul className="flex justify-center space-x-8 my-4 md:hidden">
                         <li>

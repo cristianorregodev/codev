@@ -27,16 +27,18 @@ export const ProjectBody = ({ data }) => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div>
-                    <h1 className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-6 ">{data.title}</h1>
-                    <ul className="list-none grid md:grid-cols-3  ">
-                        <li className="flex gap-1 text-dark-700 dark:text-dark-200">
+                    <h1 className="text-4xl font-bold text-primary-600 dark:text-primary-400 my-4 lg:my-0 lg:mb-4">
+                        {data.title}
+                    </h1>
+                    <ul className="list-none md:flex md:gap-8 mb-4">
+                        <li className="flex gap-1 items-center text-dark-700 dark:text-dark-200 text-sm">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 strokeWidth={1.5}
                                 stroke="currentColor"
-                                className="w-6 h-6 text-primary-600 dark:text-primary-400"
+                                className="w-4 h-4 text-primary-600 dark:text-primary-400"
                             >
                                 <path
                                     strokeLinecap="round"
@@ -46,14 +48,14 @@ export const ProjectBody = ({ data }) => {
                             </svg>
                             {data.date}
                         </li>
-                        <li className="flex gap-1 text-dark-700 dark:text-dark-200">
+                        <li className="flex gap-1 items-center text-dark-700 dark:text-dark-200 text-sm">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 strokeWidth={1.5}
                                 stroke="currentColor"
-                                className="w-6 h-6 text-primary-600 dark:text-primary-400"
+                                className="w-4 h-4 text-primary-600 dark:text-primary-400"
                             >
                                 <path
                                     strokeLinecap="round"
@@ -64,14 +66,14 @@ export const ProjectBody = ({ data }) => {
                             </svg>
                             {data.category}
                         </li>
-                        <li className="flex gap-1 text-dark-700 dark:text-dark-200">
+                        <li className="flex gap-1  text-dark-700 dark:text-dark-200 text-sm">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 strokeWidth={1.5}
                                 stroke="currentColor"
-                                className="w-6 h-6 text-primary-600 dark:text-primary-400"
+                                className="w-4 h-4 text-primary-600 dark:text-primary-400"
                             >
                                 <path
                                     strokeLinecap="round"
@@ -80,11 +82,11 @@ export const ProjectBody = ({ data }) => {
                                 />
                             </svg>
 
-                            <ul className="flex gap-1 flex-wrap">
+                            <p className="flex gap-1 flex-wrap">
                                 {data?.content?.technologies.map((item, idx) => (
-                                    <li key={idx}>{item.name + ','}</li>
+                                    <span key={idx}>{item.name + ','}</span>
                                 ))}
-                            </ul>
+                            </p>
                         </li>
                     </ul>
                     <div className="flex gap-2">

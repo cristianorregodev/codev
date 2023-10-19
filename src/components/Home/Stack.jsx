@@ -6,10 +6,10 @@ export const Stack = () => {
     return (
         <Container>
             <SectionTitle>Tecnologías</SectionTitle>
-            <article class="flex flex-col w-full gap-12 overflow-hidden relative mx-auto mt-10 py-6">
-                <div class="slide-track-l">
+            <article className="flex flex-col w-full gap-12 overflow-hidden relative mx-auto mt-10 py-6">
+                <div className="slide-track-l">
                     {MY_STACK.frontend.map((item, idx) => (
-                        <div class="slide" key={idx}>
+                        <div className="slide" key={idx}>
                             <Image
                                 src={item.icon}
                                 alt={item.name}
@@ -22,7 +22,7 @@ export const Stack = () => {
                     ))}
 
                     {MY_STACK.frontend.map((item, idx) => (
-                        <div class="slide" key={idx}>
+                        <div className="slide" key={idx}>
                             <Image
                                 src={item.icon}
                                 alt={item.name}
@@ -34,9 +34,9 @@ export const Stack = () => {
                         </div>
                     ))}
                 </div>
-                <div class="slide-track-r">
+                <div className="slide-track-r">
                     {MY_STACK.backend.map((item, idx) => (
-                        <div class="slide" key={idx}>
+                        <div className="slide" key={idx}>
                             <Image
                                 src={item.icon}
                                 alt={item.name}
@@ -48,7 +48,7 @@ export const Stack = () => {
                         </div>
                     ))}
                     {MY_STACK.backend.map((item, idx) => (
-                        <div class="slide" key={idx}>
+                        <div className="slide" key={idx}>
                             <Image
                                 src={item.icon}
                                 alt={item.name}
