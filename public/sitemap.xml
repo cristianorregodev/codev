@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://cristianorrego.dev/</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/projects</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/posts</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/projects/momentum-app</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/projects/instapets-pwa</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/projects/portal-vitrina-colombia</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/posts/patron-mvc-en-laravel</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/posts/como-crear-un-spinner-con-css</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/posts/como-clonar-un-array-en-javascript</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/posts/centrar-elementos-css</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/projects/sitio-web-colraices</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cristianorrego.dev/projects/cms-inmuebles</loc>
+  <lastmod>2023-10-22T01:29:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
