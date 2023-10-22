@@ -27,7 +27,7 @@ body::before {
     z-index: 1;
 }
 #article-body h2 {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
     color: #0891b2;
     margin: 10px 0;
@@ -41,6 +41,10 @@ body::before {
 
 #article-body pre {
     margin-bottom: 26px;
+    margin-top: 26px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 4px 10px 10px -3px rgba(0, 0, 0, 0.1);
 }
 
 #article-body p {

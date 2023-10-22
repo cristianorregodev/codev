@@ -2,13 +2,15 @@
 import Markdown from 'markdown-to-jsx'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
-import '@/helpers/prism.css'
+
 import Image from 'next/image'
 import { LocalDate } from '@/lib/local-date'
+import 'highlight.js/styles/atom-one-dark.css'
+import hljs from 'highlight.js'
 
 export const ArticleBody = ({ content, frontmatter }) => {
     useEffect(() => {
-        Prism.highlightAll()
+        hljs.highlightAll()
     }, [])
     const timeReading = Math.ceil(content.split(' ').length / 200)
     return (
@@ -27,7 +29,7 @@ export const ArticleBody = ({ content, frontmatter }) => {
                     </h1>
                     <p className="text-dark-700 dark:text-dark-200">{frontmatter?.description}</p>
                     <ul className="flex gap-4 mt-4 text-dark-700 dark:text-dark-200">
-                        <li className="flex gap-2 items-center text-sm px-2.5 py-0.5 bg-dark-200 dark:bg-dark-800 rounded">
+                        <li className="flex gap-1 items-center text-sm px-2.5 py-0.5 bg-dark-200 dark:bg-dark-800 rounded">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -45,7 +47,7 @@ export const ArticleBody = ({ content, frontmatter }) => {
                             </svg>
                             {frontmatter?.tags}
                         </li>
-                        <li className="flex gap-2 items-center text-sm px-2.5 py-0.5 bg-dark-200 dark:bg-dark-800 rounded">
+                        <li className="flex gap-1 items-center text-sm px-2.5 py-0.5 bg-dark-200 dark:bg-dark-800 rounded">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -62,7 +64,7 @@ export const ArticleBody = ({ content, frontmatter }) => {
                             </svg>
                             {new LocalDate().relativeTime(frontmatter?.date)}
                         </li>
-                        <li className="flex gap-2 items-center text-sm px-2.5 py-0.5 bg-dark-200 dark:bg-dark-800 rounded">
+                        <li className="flex gap-1 items-center text-sm px-2.5 py-0.5 bg-dark-200 dark:bg-dark-800 rounded">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -77,7 +79,7 @@ export const ArticleBody = ({ content, frontmatter }) => {
                                     d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
                                 />
                             </svg>
-                            {timeReading} min leyendo
+                            Lectura {timeReading} min
                         </li>
                     </ul>
                 </section>

@@ -2,7 +2,7 @@ import { Banner } from '@/components/Banner'
 import { ListOfProjects } from '@/components/Projects/ListOfProjects'
 import { Suspense } from 'react'
 export const metadata = {
-    title: 'Cristian Orrego 👨‍💻 | Portafolio',
+    title: 'Cristian Orrego Dev 👨‍💻 | Portafolio',
     description:
         'Explora mí portafolio web y descubre mis proyectos más destacados. Desde aplicaciones interactivas hasta sitios web de última generación, este portafolio te brinda una visión única de mi habilidad y creatividad.',
 }

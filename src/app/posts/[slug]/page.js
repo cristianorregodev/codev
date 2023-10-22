@@ -6,10 +6,6 @@ export async function generateMetadata({ params }) {
     const { slug } = params
     const { frontmatter } = await getPostBySlug(slug)
     return {
-        metadataBase: new URL('https://cristianorrego.dev'),
-        alternats: {
-            canonical: `/posts`,
-        },
         title: `Cristian Orrego Dev 👨‍💻 | ${frontmatter?.title}`,
         description: frontmatter?.description,
         openGraph: {
