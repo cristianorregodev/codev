@@ -3,9 +3,9 @@ import { getAllPostsMetadata } from '@/lib/mdx'
 import { ListOfPosts } from '@/components/Articles/ListOfPosts'
 
 export const metadata = {
-    title: 'Cristian Orrego 👨‍💻 | Portafolio',
+    title: 'Cristian Orrego Dev 👨‍💻 | Blog',
     description:
-        'Explora mí portafolio web y descubre mis proyectos más destacados. Desde aplicaciones interactivas hasta sitios web de última generación, este portafolio te brinda una visión única de mi habilidad y creatividad.',
+        'Blog de programación en español. Explora diferentes tecnologías, encuentra guías y trucos. Aprende desarrollo web y vuélvete experto en lo que tanto te gusta.',
 }
 export default function PostsPage() {
     const posts = getAllPostsMetadata()
