@@ -9,7 +9,7 @@ import { getAllPostsMetadata } from '@/lib/mdx'
 
 export const Articles = async () => {
     const posts = getAllPostsMetadata()
-    const articles = posts.slice(0, 6)
+    const articles = posts.slice(0, 3)
     return (
         <Container id="articles-section">
             <SectionTitle>Artículos</SectionTitle>
