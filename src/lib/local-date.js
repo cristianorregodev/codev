@@ -24,23 +24,23 @@ class LocalDate {
         const diffToToday = this.diff(substractingDate)
         if (diffToToday > 7 && diffToToday < 30) {
             return new Intl.RelativeTimeFormat('es', { style: 'long' }).format(
-                -Math.ceil(this.diff(substractingDate, 'week')),
+                -Math.floor(this.diff(substractingDate, 'week')),
                 'week'
             )
         }
         if (diffToToday > 30 && diffToToday < 365) {
             return new Intl.RelativeTimeFormat('es', { style: 'long' }).format(
-                -Math.ceil(this.diff(substractingDate, 'month')),
+                -Math.floor(this.diff(substractingDate, 'month')),
                 'month'
             )
         }
         if (diffToToday >= 365) {
             return new Intl.RelativeTimeFormat('es', { style: 'long' }).format(
-                -Math.ceil(this.diff(substractingDate, 'year')),
+                -Math.floor(this.diff(substractingDate, 'year')),
                 'year'
             )
         }
-        return new Intl.RelativeTimeFormat('es', { style: 'long' }).format(-Math.ceil(diffToToday), 'day')
+        return new Intl.RelativeTimeFormat('es', { style: 'long' }).format(-Math.floor(diffToToday), 'day')
     }
 
     diff(date, diffType = 'day') {

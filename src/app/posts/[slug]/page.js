@@ -1,18 +1,6 @@
 import { getPostBySlug, getPosts } from '@/lib/mdx'
 import { ArticleBody } from '@/components/ArticleBody'
-import { Banner } from '@/components/Banner'
 
-export async function generateMetadata({ params }) {
-    const { slug } = params
-    const { frontmatter } = await getPostBySlug(slug)
-    return {
-        title: `Cristian Orrego Dev 👨‍💻 | ${frontmatter?.title}`,
-        description: frontmatter?.description,
-        openGraph: {
-            images: [frontmatter?.cover],
-        },
-    }
-}
 export async function generateStaticParams() {
     const posts = getPosts()
     const paths = posts.map((post) => ({
@@ -20,6 +8,21 @@ export async function generateStaticParams() {
     }))
 
     return paths
+}
+export async function generateMetadata({ params }, parent) {
+    const { slug } = params
+    const { frontmatter } = await getPostBySlug(slug)
+    const previousImages = (await parent).openGraph?.images || []
+
+    return {
+        metadataBase: new URL('https://cristianorrego.dev'),
+        title: `Cristian Orrego Dev 👨‍💻 | ${frontmatter?.title}`,
+        description: frontmatter.description,
+        openGraph: {
+            images: [frontmatter.cover, ...previousImages],
+        },
+        author: 'cristianorregodev',
+    }
 }
 
 export default async function PostPage({ params }) {

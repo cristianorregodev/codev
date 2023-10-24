@@ -6,6 +6,8 @@ export const metadata = {
     title: 'Cristian Orrego Dev 👨‍💻 | Blog',
     description:
         'Blog de programación en español. Explora diferentes tecnologías, encuentra guías y trucos. Aprende desarrollo web y vuélvete experto en lo que tanto te gusta.',
+    metadataBase: new URL('https://cristianorrego.dev'),
+    author: 'cristianorregodev',
 }
 export default function PostsPage() {
     const posts = getAllPostsMetadata()

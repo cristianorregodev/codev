@@ -4,6 +4,7 @@ import './globals.css'
 import { Footer } from '@/components/Footer'
 
 export const metadata = {
+    metadataBase: new URL('https://cristianorrego.dev'),
     title: 'Cristian Orrego Dev 👨‍💻 | FullStack, React, Next, Laravel, NodeJS, Desarrollo',
     description:
         'Hola 👋, soy Cristian Orrego Dev, profesional en Ingeniería en Sistemas y Desarrollador FullStack con más de 3 años de experiencia en TI creando soluciones web desde páginas web informativas hasta aplicaciones web para uso de empresas resolviendo problemas de rendimiento y ayudando en el arduo proceso de digitalización. Echa un vistazo al timeline donde resumo mi experiencia y encuentra al final mi curriculum actualizado.',
@@ -16,6 +17,7 @@ export const metadata = {
         type: 'website',
         locale: 'es_ES',
         url: 'https://cristianorrego.dev',
+        author: 'cristianorregodev',
     },
 }
 
