@@ -19,9 +19,11 @@ export async function generateMetadata({ params }, parent) {
         title: `Cristian Orrego Dev 👨‍💻 | ${frontmatter?.title}`,
         description: frontmatter.description,
         openGraph: {
+            title: `Cristian Orrego Dev 👨‍💻 | ${frontmatter?.title}`,
+            description: frontmatter.description,
             images: [frontmatter.cover, ...previousImages],
+            author: 'cristianorregodev',
         },
-        author: 'cristianorregodev',
     }
 }
 

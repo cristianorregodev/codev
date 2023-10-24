@@ -10,9 +10,11 @@ export async function generateMetadata({ params }, parent) {
         title: `Cristian Orrego Dev 👨‍💻 | ${project.title}`,
         description: project?.content?.abstract,
         openGraph: {
+            title: `Cristian Orrego Dev 👨‍💻 | ${project.title}`,
+            description: project?.content?.abstract,
             images: [project?.content?.images?.cover, ...previousImages],
+            author: 'cristianorregodev',
         },
-        author: 'cristianorregodev',
     }
 }
 export default async function ProjectPage({ params }) {
