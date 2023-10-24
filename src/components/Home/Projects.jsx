@@ -1,9 +1,7 @@
-import { AiOutlineArrowRight } from 'react-icons/ai'
-import { getData } from '@/services/getData'
-import { SectionTitle } from '../SectionTitle'
-import { API_URL } from '@/config'
-import { ProjectCard } from '../ProjectCard'
 import Link from 'next/link'
+import { AiOutlineArrowRight } from 'react-icons/ai'
+import { SectionTitle } from '../SectionTitle'
+import { ProjectCard } from '../ProjectCard'
 import { Container } from '../Container'
 import { PROJECTS } from '@/helpers/projects'
 
