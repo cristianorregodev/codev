@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const ArticleCard = ({ article }) => {
     return (
         <Link href={`/posts/${article.slug}`} className="w-full">
-            <article className="grid grid-cols-[1fr,2fr] gap-3 p-2 items-center lg:grid-cols-1 md:p-4 bg-dark-50  hover:scale-[1.02] hover:bg-dark-100 dark:hover:bg-dark-950 rounded-lg shadow dark:bg-dark-900  transition-all duration-300">
+            <article className="grid grid-cols-[1fr,2fr] gap-3 p-2 items-center lg:grid-cols-1 md:p-4 bg-dark-50  hover:scale-[1.02] hover:bg-dark-100 dark:hover:bg-dark-900 rounded-lg shadow dark:shadow-dark-900 dark:bg-dark-950  transition-all duration-300">
                 <header>
                     <Image
                         src={article?.cover}

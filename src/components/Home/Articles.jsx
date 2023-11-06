@@ -1,7 +1,5 @@
-import { getData } from '@/services/getData'
 import { ArticleCard } from '../ArticleCard'
 import { SectionTitle } from '../SectionTitle'
-import { API_URL } from '@/config'
 import Link from 'next/link'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { Container } from '../Container'
@@ -9,7 +7,18 @@ import { getAllPostsMetadata } from '@/lib/mdx'
 
 export const Articles = async () => {
     const posts = getAllPostsMetadata()
-    const articles = posts.slice(0, 3)
+    const articles = posts
+        .sort((a, b) => {
+            if (a.date < b.date) {
+                return 1
+            }
+            if (a.date > b.date) {
+                return -1
+            }
+            // a must be equal to b
+            return 0
+        })
+        .slice(0, 3)
     return (
         <Container id="articles-section">
             <SectionTitle>Artículos</SectionTitle>
