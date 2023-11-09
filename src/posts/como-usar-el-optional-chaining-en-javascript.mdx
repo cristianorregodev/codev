@@ -1,0 +1,102 @@
+---
+title: 'Cómo usar el operador de acceso Optional Chaining'
+date: '2023-11-07'
+description: >-
+    Aprende sobre el Optional Chaining en JavaScript: cómo usarlo, cuándo es conveniente, sus ventajas y desventajas. Evita errores y mejora la legibilidad de tu código.
+toc: true
+tags:
+    - javascript
+cover: '/images/posts/optional-chaining.svg'
+---
+
+Si eres un desarrollador JavaScript, es muy probable que hayas tenido que lidiar con errores de "TypeError" debido a propiedades o métodos que no existen en objetos anidados. Pero no te preocupes, con el Optional Chaining tienes la solución ideal.
+
+## ¿Qué es el Optional Chaining?
+
+El <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining" target="_blank">Optional Chaining</a> es un nuevo operador en JavaScript que te permite acceder a propiedades de objetos anidados sin tener que verificar manualmente si cada nivel de anidamiento existe. En esencia, actúa como una especie de red de seguridad que evita que tu código se rompa cuando intenta acceder a propiedades que no existen.
+
+## ¿Cómo se usa el Optional Chaining?
+
+La forma habitual que conocemos para acceder a una propiedad de un objeto es el operador `dot notation` **(.)**, ese operador rompe inmediatamente la aplicación si intemamos acceder a una propiedad del objeto que no existe. Para solucionar esto, usamos el Optional Chaining, simplemente añades un signo de interrogación **(?)** después de la propiedad o método que quieres acceder y seguido el **(.)** habitual. Veamos un ejemplo:
+
+```javascript
+const person = {
+    name: 'Juan',
+    work: {
+        title: 'Developer',
+    },
+}
+
+const occupation = person.work?.title
+console.log(occupation) // 'Developer'
+```
+
+Si `person.work` no existiera, en lugar de lanzar un error, el resultado sería `undefined`.
+
+## ¿Cuándo usar el Opional Chaining?
+
+El Optional Chaining es especialmente útil cuando trabajas con datos que provienen de API o bases de datos, donde la estructura de los objetos puede variar. También es útil cuando quieres acceder a propiedades anidadas de manera segura (que no se rompa la aplicación) sin necesidad de escribir lógica de verificación compleja.
+
+Supongamos que estás trabajando con datos de usuarios que vienen de una API, y la estructura de los objetos puede variar. A veces, los usuarios tienen una dirección de correo electrónico secundaria, pero otras veces no. Utilizar Optional Chaining facilita el acceso a la dirección de correo electrónico secundaria sin provocar errores:
+
+```javascript
+//Simulaión respuesta API
+const API_RESPONSE = {
+    name: 'Ana',
+    mainEmail: {
+        mailAddress: 'ana@email.com',
+    },
+    // La propiedad 'secondaryEmail' puede no existir en algunos usuarios.
+}
+
+const secondaryEmail = API_RESPONSE.secondaryEmail?.mailAddress
+console.log(secondaryEmail) // Si 'secondaryEmail' existe, se imprime; de lo contrario, se obtiene 'undefined'.
+```
+
+En este caso, el uso de Optional Chaining evita lanzar un error si la propiedad `secondaryEmail` no está presente en el objeto `API_RESPONSE`.
+
+## Cuidado, no siempre es la mejor opción... 😟
+
+Cuando trabajas con objetos donde se espera que todas las propiedades estén presentes y no deban ser opcionales, usar el <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation" target="_blank">dot notation</a> es preferible ya que indica que se requiere la propiedad y su ausencia sería un error que debe corregirse. Por ejemplo, en un objeto de configuración:
+
+```javascript
+const config = {
+    lang: 'es',
+    theme: 'claro',
+    results_limit: 10,
+}
+
+// Accediendo a propiedades con dot notation
+const lang = config.lang
+const limit = config.results_limit
+console.log(lang, limit) // 'es' 10
+```
+
+Otro escenario podría ser cuando necesitamos pasar una propiedad específica por una validación:
+
+```javascript
+const user = {
+    name: 'Cristian Orrego',
+    email: 'cristian@email.com',
+}
+
+const emailValidation = isEmail(user.email)
+console.log(emailValidation) // true or false
+```
+
+En ambos casos, las propiedades a las que tratamos de acceder deben exisir para continuar con la normal ejecución de nuestra aplicación, como deben existir, esto implica que debemos incluir validaciones adicionales según sea el caso.
+
+## Ventajas
+
+-   Evita errores "TypeError" al acceder a propiedades inexistentes.
+-   Simplifica el código, eliminando la necesidad de comprobaciones verbosas.
+-   Mejora la legibilidad del código al mostrar claramente las intenciones del desarrollador.
+
+## Desventajas
+
+-   No es compatible con navegadores más antiguos, por lo que es importante verificar la compatibilidad antes de usarlo.
+-   Puede hacer que los errores pasen desapercibidos si no se manejan adecuadamente.
+
+## Conclusiones
+
+El Optional Chaining es una adición valiosa a JavaScript que hace que el código sea más robusto y legible al evitar errores de acceso a propiedades inexistentes. Sin embargo, como con cualquier característica, es importante usarlo con precaución y considerar la compatibilidad con los navegadores objetivo. También es importante que sepas decidir en que momento es buena idea usarlo y cuando no, como ves, no siempre es la mejor elección, todo depende al final de tu caso de uso particular.
