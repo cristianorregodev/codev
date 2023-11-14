@@ -137,7 +137,16 @@ body::before {
 #article-body ul strong {
     color: #0891b2;
 }
-
+#article-body blockquote {
+    padding-left: 1.5em;
+    border-left: solid 5px rgba(0, 0, 0, 0.1);
+}
+#article-body blockquote p {
+    font-size: 16px;
+}
+.dark #article-body blockquote {
+    border-left: solid 5px rgba(255, 255, 255, 0.178);
+}
 .dark #article-body ul {
     list-style: inside;
     color: #e2e8f0;
