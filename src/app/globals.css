@@ -26,7 +26,8 @@ body::before {
     background: linear-gradient(to bottom, transparent 0%, rgba(7, 64, 121, 0.781) 80%);
     z-index: 1;
 }
-#article-body h2 {
+#article-body h2,
+#article-body h3 {
     font-size: 26px;
     font-weight: bold;
     color: #0891b2;
@@ -68,7 +69,8 @@ body::before {
     color: #0891b2;
 }
 
-.dark #article-body h2 {
+.dark #article-body h2,
+#article-body h3 {
     color: #22d3ee;
 }
 .dark #article-body p {
@@ -122,19 +124,30 @@ body::before {
     color: #22d3ee;
 }
 
-#article-body ul {
-    list-style: disc;
+#article-body ul,
+#article-body ol {
     color: #334155;
     font-size: 18px;
     margin-left: 20px;
 }
+#article-body ul {
+    list-style: disc;
+}
+#article-body ol {
+    list-style: decimal;
+}
 .dark #article-body ul {
     list-style: disc !important;
 }
-#article-body ul a {
+.dark #article-body ol {
+    list-style: decimal !important;
+}
+#article-body ul a,
+#article-body ol a {
     text-decoration: underline;
 }
-#article-body ul strong {
+#article-body ul strong,
+#article-body ol strong {
     color: #0891b2;
 }
 #article-body blockquote {
@@ -152,8 +165,14 @@ body::before {
     color: #e2e8f0;
     font-size: 18px;
 }
+.dark #article-body ol {
+    list-style: decimal;
+    color: #e2e8f0;
+    font-size: 18px;
+}
 
-.dark #article-body ul strong {
+.dark #article-body ul strong,
+#article-body ol strong {
     color: #22d3ee;
 }
 
@@ -221,4 +240,30 @@ body::before {
 .slide:hover span {
     opacity: 1;
     transform: translateY(5px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #232121;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0891b2;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0890b294;
+}
+
+*::selection {
+    background-color: #0891b2; /* No changes to pixel values */
+    color: white; /* No changes to pixel values */
 }

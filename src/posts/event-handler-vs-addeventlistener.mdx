@@ -1,0 +1,105 @@
+---
+title: 'Event Handlers vs addEventListener en JavaScript'
+date: '2023-11-14'
+description: >-
+    Domina las interacciones de tu web, aprende a manipular eventos, te explico dos alternativas, sus diferencias y cómo aplicarlas sea tu caso de uso.
+toc: true
+tags:
+    - javascript
+cover: '/images/posts/event-handler-vs-addeventlistener.svg'
+---
+
+JavaScript es el motor detrás de la interactividad de las páginas web modernas. Una de sus características fundamentales es el manejo de eventos, que permiten que sus aplicaciones web respondan a las interacciones del usuario, como clics, pulsaciones de teclas, movimientos del mouse y algunas más.
+
+Dos formas comunes de manejar eventos en JavaScript son mediante controladores de eventos (Event Handlers) y el método addEventListener.
+
+## Event Handlers, un enfoque clásico 📌
+
+Imagina que tienes un botón en tu página web y quieres que suceda algo cuando un usuario hace clic en él.
+
+Así es como puedes hacerlo usando un controlador de eventos:
+
+```html
+<button id="myButton">Click me!</button>
+
+<script>
+    // Obtiene el elemento del botón por su ID
+    const button = document.getElementById('myButton')
+
+    // Define una función para ejecutarse cuando se de clic al botón
+    function handleClick() {
+        alert('Button clicked!')
+    }
+
+    // Asigna la función al evento clic del botón
+    button.onclick = handleClick
+</script>
+```
+
+En este ejemplo ⬆️⬆️⬆️
+
+1. Seleccionamos el botón usando `getElementById`.
+2. Creamos una función llamada `handleClick`, la cual se ejecutará cuando se haga clic en el botón. En este caso muestra una alerta.
+3. Asignamos la función `handleClick` a la propiedad `onclick` del botón. Este es el controlador de eventos en acción. Cuando se hace clic al botón, se llama a la función `handleClick`.
+
+## addEventListener, un enfoque moderno 😎
+
+Si bien los controladores de eventos funcionan bien, tienen algunas limitaciones, especialmente cuando deseas asignar varias funciones al mismo evento.
+
+Aquí es donde brilla el método `addEventListener`:
+
+```html
+<button id="myButton">Click me!</button>
+
+<script>
+    // Obtiene el elemento del botón por su ID
+    const button = document.getElementById('myButton')
+
+    // Define la primera función a ejecutar cuando se haga clic al botón
+    function firstFunction() {
+        alert('First function')
+    }
+
+    // Define la segunda función a ejecutar cuando se haga clic al botón
+    function secondFunction() {
+        alert('Second function')
+    }
+
+    // Se usa addEventListener para adjuntar las funciones al evento clic del botón
+    button.addEventListener('click', firstFunction)
+    button.addEventListener('click', secondFunction)
+</script>
+```
+
+En este ejemplo ⬆️⬆️⬆️
+
+1. Seleccionamos el elemento botón como en el caso anterior.
+2. Definimos dos funciones, `firstFunction` y `secondFunction`, para que se ejecuten cuando se hace clic al botón.
+3. Usamos `addEventListener` para adjuntar ambas funciones al evento clic del botón. Ahora, cuando se hace clic en el botón, ambas funciones se ejecutan en el orden que fueron agregadas.
+
+## Diferencias clave
+
+Entonces, aclaremos las principales diferencias entre el Event Handler y el `addEventListener`:
+
+### 1. Múltiples Event Listeners
+
+-   **Event Handlers**: solo puede adjuntar un controlador de eventos por tipo de evento a un elemento. Si asigna una nueva función a un controlador de eventos, reemplaza la anterior.
+-   **addEventListener**: puede adjuntar varios detectores de eventos al mismo tipo de evento en un elemento. Todos se ejecutarán en el orden en que fueron agregados.
+
+### 2. Separación más clara de preocupaciones
+
+-   **Event Handler**: las funciones y la lógica de manejo de eventos se combinan, lo que puede hacer que su código esté menos organizado a medida que su proyecto crece.
+-   **addEventListener**: promueve una separación más clara de las preocupaciones al permitirle definir la lógica de manejo de eventos por separado del elemento y el tipo de evento.
+
+### 3. Eliminación de eventos
+
+-   **Event Handler**: eliminar controladores de eventos puede ser complicado y puede requerir configurar el controlador de eventos en `null`.
+-   **addEventListener**: proporciona un método sencillo `removeEventListener` para eliminar detectores de eventos específicos cuando ya no sean necesarios.
+
+## Conclusiones
+
+Ambos manejadores de eventos tienen su lugar en JavaScript, y elegir entre ellos depende de su caso de uso específico.
+
+Si necesitas una solución simple y solo una función para manejar un evento, los Event Handlers funcionan bien.
+
+Sin embargo, si necesitas interacciones más complejas, múltiples detectores de eventos o una estructura de código más limpia, el `addEventListener` es la opción moderna que brinda mayor flexibilidad y control sobre el manejo de eventos.
