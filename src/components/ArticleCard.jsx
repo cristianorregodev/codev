@@ -1,6 +1,7 @@
 import { LocalDate } from '@/lib/local-date'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ShowDate } from './ShowDate'
 
 export const ArticleCard = ({ article }) => {
     return (
@@ -24,9 +25,7 @@ export const ArticleCard = ({ article }) => {
                     </p>
 
                     <footer className="pt-2">
-                        <span className="bg-dark-200 dark:bg-dark-700 rounded px-2 py-0.5 text-sm mr-2">
-                            {new LocalDate().relativeTime(article?.date)}
-                        </span>
+                        <ShowDate date={article?.date} />
                         <span className="bg-dark-200 dark:bg-dark-700 rounded px-2 py-0.5 text-dark-700 dark:text-dark-200 text-sm ">
                             {article.tags}
                         </span>

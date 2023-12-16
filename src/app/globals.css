@@ -70,7 +70,7 @@ body::before {
 }
 
 .dark #article-body h2,
-#article-body h3 {
+.dark #article-body h3 {
     color: #22d3ee;
 }
 .dark #article-body p {
