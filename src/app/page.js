@@ -13,7 +13,7 @@ export default function Home() {
             <Projects />
             <About />
             <Articles />
-            {/* <Stack /> */}
+            <Stack />
         </>
     )
 }

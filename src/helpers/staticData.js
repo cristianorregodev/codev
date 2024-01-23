@@ -1,3 +1,29 @@
+import GitHubIcon from '@/components/icons/GitHub'
+import ApacheIcon from '@/components/icons/stack/Apache'
+import AstroIcon from '@/components/icons/stack/Astro'
+import CSSIcon from '@/components/icons/stack/CSS'
+import DockerIcon from '@/components/icons/stack/Docker'
+import ExpressIcon from '@/components/icons/stack/Express'
+import FigmaIcon from '@/components/icons/stack/Figma'
+import GitIcon from '@/components/icons/stack/Git'
+import HtmlIcon from '@/components/icons/stack/Html'
+import JavaScriptIcon from '@/components/icons/stack/JavaScript'
+import LaravelIcon from '@/components/icons/stack/Laravel'
+import MongoDBIcon from '@/components/icons/stack/MongoDB'
+import MySQLIcon from '@/components/icons/stack/MySQL'
+import NextJSIcon from '@/components/icons/stack/NextJS'
+import NginxIcon from '@/components/icons/stack/Nginx'
+import NodeJSIcon from '@/components/icons/stack/NodeJS'
+import NpmIcon from '@/components/icons/stack/Npm'
+import PHPIcon from '@/components/icons/stack/PHP'
+import PythonIcon from '@/components/icons/stack/Python'
+import ReactJSIcon from '@/components/icons/stack/ReactJS'
+import SassIcon from '@/components/icons/stack/Sass'
+import TailwindIcon from '@/components/icons/stack/Tailwind'
+import TerminalIcon from '@/components/icons/stack/Terminal'
+import TypeScriptIcon from '@/components/icons/stack/TypeScript'
+import VSCodeIcon from '@/components/icons/stack/VSCode'
+import WordPressIcon from '@/components/icons/stack/WordPress'
 export const experienceInfo = [
     {
         role: 'Programador FullStack',
@@ -33,23 +59,37 @@ export const experienceInfo = [
 
 export const MY_STACK = {
     frontend: [
-        { name: 'HTML', icon: '/images/stack/html-5.png' },
-        { name: 'CSS', icon: '/images/stack/css-3.png' },
-        { name: 'JavaScript', icon: '/images/stack/js.png' },
-        { name: 'ReactJS', icon: '/images/stack/reactjs.png' },
-        { name: 'TailwindCSS', icon: '/images/stack/tailwind.png' },
-        { name: 'SASS', icon: '/images/stack/sass.png' },
-        { name: 'NextJS', icon: '/images/stack/next-js.png' },
-        { name: 'Figma', icon: '/images/stack/figma.png' },
+        { name: 'HTML', icon: HtmlIcon },
+        { name: 'CSS', icon: CSSIcon },
+        { name: 'JavaScript', icon: JavaScriptIcon },
+        { name: 'ReactJS', icon: ReactJSIcon },
+        { name: 'TailwindCSS', icon: TailwindIcon },
+        { name: 'SASS', icon: SassIcon },
+        { name: 'Figma', icon: FigmaIcon },
     ],
     backend: [
-        { name: 'PHP', icon: '/images/stack/php.png' },
-        { name: 'NodeJS', icon: '/images/stack/nodejs.png' },
-        { name: 'Laravel', icon: '/images/stack/laravel.png' },
-        { name: 'ExpressJS', icon: '/images/stack/express.png' },
-        { name: 'MySQL', icon: '/images/stack/mysql.png' },
-        { name: 'MongoDB', icon: '/images/stack/mongodb.png' },
-        { name: 'Git', icon: '/images/stack/git.png' },
-        { name: 'Nginx', icon: '/images/stack/nginx.svg' },
+        { name: 'PHP', icon: PHPIcon },
+        { name: 'NodeJS', icon: NodeJSIcon },
+        { name: 'Laravel', icon: LaravelIcon },
+        { name: 'ExpressJS', icon: ExpressIcon },
+        { name: 'MySQL', icon: MySQLIcon },
+        { name: 'MongoDB', icon: MongoDBIcon },
+        { name: 'Next.js', icon: NextJSIcon },
+        { name: 'Nginx', icon: NginxIcon },
+        { name: 'Apache', icon: ApacheIcon },
+    ],
+    learning: [
+        { name: 'Python', icon: PythonIcon },
+        { name: 'Astro', icon: AstroIcon },
+        { name: 'Docker', icon: DockerIcon },
+        { name: 'TypeScript', icon: TypeScriptIcon },
+    ],
+    tools: [
+        { name: 'Git', icon: GitIcon },
+        { name: 'GitHub', icon: GitHubIcon },
+        { name: 'Terminal', icon: TerminalIcon },
+        { name: 'VSCode', icon: VSCodeIcon },
+        { name: 'npm', icon: NpmIcon },
+        { name: 'WordPress', icon: WordPressIcon },
     ],
 }
