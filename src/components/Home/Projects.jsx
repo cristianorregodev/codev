@@ -19,15 +19,111 @@ export const Projects = async () => {
     return (
         <Container id="projects">
             <SectionTitle>Proyectos</SectionTitle>
-            <p className="mt-6 text-dark-700 dark:text-dark-200 text-justify">
+            <p className="mt-6 text-dark-700 dark:text-dark-200">
                 Mis proyectos más emocionantes y creativos. Cada proyecto es el resultado de mi dedicación y pasión por
                 la programación, y estoy encantado de compartirlos contigo. Descubre cómo transformo ideas en realidades
                 digitales. ¡Explora, inspira y crea con mis proyectos de software!
             </p>
-            <div className="mt-8 grid gap-4 place-items-center md:grid-cols-2 md:gap-6 lg:grid-cols-3 ">
-                {sorted.map((project) => (
-                    <ProjectCard key={project.slug} project={project} />
-                ))}
+            <div className="grid md:grid-cols-4 gap-4 mt-6">
+                <Link
+                    href={`/projects/${sorted[0].slug}`}
+                    className="relative bg-dark-100 shadow dark:shadow-primary-50/10 dark:bg-dark-900 w-full rounded-3xl min-h-[340px] md:col-span-2 p-1 group overflow-hidden"
+                >
+                    <figure className="w-full rounded-3xl overflow-hidden">
+                        <img
+                            className="w-full h-full min-h-[232px] object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-300"
+                            src={sorted[0].content.images.cover}
+                            alt=""
+                        />
+                    </figure>
+                    <div className="p-6">
+                        <h1 className="font-bold text-lg text-primary-600 dark:text-primary-400">{sorted[0].title}</h1>
+                        <p className="line-clamp-3 mt-4 text-dark-700 dark:text-dark-200">
+                            {sorted[0].content.description}
+                        </p>
+                        <ul className="flex gap-1 flex-wrap text-sm mt-4">
+                            {sorted[0]?.content?.technologies.map((item, idx) => (
+                                <li
+                                    key={idx}
+                                    className="rounded-full px-2 border-dark-200 dark:border-dark-800 bg-dark-300/60 dark:bg-primary-900/30 backdrop-blur-sm text-dark-700 dark:text-dark-200"
+                                >
+                                    {' '}
+                                    {item.name}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <span className="absolute top-4 left-4 backdrop-blur-md bg-dark-600/50 py-1 px-2 rounded-full z-10 text-sm font-semibold text-dark-100 ">
+                        {sorted[0].category}
+                    </span>
+                </Link>
+                <Link
+                    href={`/projects/${sorted[1].slug}`}
+                    className="relative bg-dark-100 shadow dark:shadow-primary-50/10 dark:bg-dark-900 w-full rounded-3xl min-h-[340px] md:col-span-2 p-1 group overflow-hidden"
+                >
+                    <figure className="w-full rounded-3xl overflow-hidden">
+                        <img
+                            className="w-full h-full min-h-[232px] object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-300"
+                            src={sorted[1].content.images.cover}
+                            alt=""
+                        />
+                    </figure>
+                    <div className="p-6">
+                        <h1 className="font-bold text-lg text-primary-600 dark:text-primary-400">{sorted[1].title}</h1>
+                        <p className="line-clamp-3 mt-4 text-dark-700 dark:text-dark-200">
+                            {sorted[1].content.description}
+                        </p>
+                        <ul className="flex gap-1 flex-wrap text-sm mt-4">
+                            {sorted[1]?.content?.technologies.map((item, idx) => (
+                                <li
+                                    key={idx}
+                                    className="rounded-full px-2 border-dark-200 dark:border-dark-800 bg-dark-300/60 dark:bg-primary-900/30 backdrop-blur-sm text-dark-700 dark:text-dark-200"
+                                >
+                                    {' '}
+                                    {item.name}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <span className="absolute top-4 left-4 backdrop-blur-md bg-dark-600/50 py-1 px-2 rounded-full z-10 text-sm font-semibold text-dark-100 ">
+                        {sorted[1].category}
+                    </span>
+                </Link>
+
+                <Link
+                    href={`/projects/${sorted[2].slug}`}
+                    className="relative bg-dark-100 shadow dark:shadow-primary-50/10 dark:bg-dark-900 w-full rounded-3xl min-h-[340px] md:col-span-4 md:flex md:flex-row-reverse md:items-center p-1 group overflow-hidden"
+                >
+                    <figure className="w-full rounded-3xl overflow-hidden md:w-1/2 md:h-full">
+                        <img
+                            className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-300"
+                            src={sorted[2].content.images.cover}
+                            alt=""
+                        />
+                    </figure>
+                    <div className="p-6 md:w-1/2">
+                        <h1 className="font-bold text-lg text-primary-600 dark:text-primary-400">{sorted[2].title}</h1>
+                        <p className="line-clamp-3 mt-4 text-dark-700 dark:text-dark-200">
+                            {sorted[2].content.description}
+                        </p>
+                        <ul className="flex gap-1 flex-wrap text-sm mt-4">
+                            {sorted[2]?.content?.technologies.map((item, idx) => (
+                                <li
+                                    key={idx}
+                                    className="rounded-full px-2 border-dark-200 dark:border-dark-800 bg-dark-300/60 dark:bg-primary-900/30 backdrop-blur-sm text-dark-700 dark:text-dark-200"
+                                >
+                                    {' '}
+                                    {item.name}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <span className="absolute top-4 left-4 backdrop-blur-md bg-dark-600/50 py-1 px-2 rounded-full z-10 text-sm font-semibold text-dark-100 ">
+                        {sorted[2].category}
+                    </span>
+                </Link>
             </div>
             <div className="flex justify-center w-full mt-8">
                 <Link

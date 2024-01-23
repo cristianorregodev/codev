@@ -2,26 +2,30 @@ export const experienceInfo = [
     {
         role: 'Programador FullStack',
         date: 'Enero 2022 - Presente',
+        company: 'Colraices',
         description:
-            'Nuevo rol como programador FullStack, encargado de desarrollar soluciones web en empresa del sector financiero e inmobiliario mejorando procesos internos y la interacción con el usuario final',
+            'Encargado de desarrollar soluciones web en empresa del sector financiero e inmobiliario. Desarrollo de convenciones de código internas de acuerdo a buenas prácticas de programación. Liderar el equipo de desarrollo Backend.',
     },
     {
         role: 'Web master',
         date: 'Febrero 2020 - Noviembre 2021',
+        company: 'Diocesano Santa María',
         description:
-            'Rediseño y mantenimiento de sitio y aplicación web en institución del sector educativo donde además de estar bajo el rol de Web master, dí clases de programación y desarrollo web.',
+            'Rediseño y mantenimiento de sitio y aplicación web en institución del sector educativo. Dar clases de programación a cursos de ultimo grado. Liderar el comité de Ciencia y Tecnología de la institución.',
     },
 
     {
-        role: 'Primer proyecto para producción',
-        date: 'Septiembre 2019',
+        role: 'Técnico de soporte',
+        date: 'Diciembre 2018 - Diciembre 2019',
+        company: 'La Sucursal Ferreteria',
         description:
-            'En mi proceso de formación como Ingeniero en Sistemas surge la posibildiad de mejorar la presencia en internet de un centro educativo local desarrollando un sitio web institucional informativo.',
+            'Desarrollar calculdaora de simulación de costos para materiales de construcción. Administrar y dar soporte técnico al software contable y de facturación. Implementar herramientas de gestión de la comunicación y trabajo en equipo.',
     },
 
     {
         role: 'Aprendizaje autónomo',
         date: '2018 - 2019',
+        company: 'Autónomo',
         description:
             'Primeros pasos en el desarrollo web aprendiendo en mis clases de ingeniería y de forma autodidacta con cursos virtuales, donde creé algunos proyectos personales los cuáles me abrieron las puertas al mundo laboral dentro de la insdustria TI.',
     },

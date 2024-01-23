@@ -5,9 +5,9 @@ export const ProjectCard = ({ project }) => {
     return (
         <Link
             href={`/projects/${project.slug}`}
-            className="group max-w-sm lg:max-w-full min-h-fit bg-dark-50 border border-dark-100 rounded-lg shadow dark:bg-dark-900 dark:border-dark-700"
+            className="group max-w-sm lg:max-w-full min-h-fit bg-dark-50  rounded-xl shadow dark:bg-dark-900 dark:border-dark-700"
         >
-            <div className="relative h-48 w-full overflow-hidden rounded-t-lg ">
+            <div className="relative h-48 w-full overflow-hidden rounded-t-xl ">
                 <span className="absolute top-2 right-2 backdrop-blur-md bg-dark-600/50 py-1 px-2 rounded-lg z-10 text-sm font-semibold text-dark-100 ">
                     {project.category}
                 </span>
@@ -30,10 +30,15 @@ export const ProjectCard = ({ project }) => {
                     {project?.content?.description}
                 </p>
 
-                <h6 className="text-lg font-bold text-primary-600 dark:text-primary-400">Stack</h6>
                 <ul className="flex gap-1 flex-wrap  text-dark-700 dark:text-dark-200 mb-2 text-sm">
                     {project?.content?.technologies.map((item, idx) => (
-                        <li key={idx}>&middot; {item.name}</li>
+                        <li
+                            key={idx}
+                            className="rounded-md border border-dark-200 dark:border-dark-800 bg-dark-300/60 dark:bg-dark-800 px-2 py-1 font-mono text-xs"
+                        >
+                            {' '}
+                            {item.name}
+                        </li>
                     ))}
                 </ul>
             </div>

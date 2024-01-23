@@ -15,7 +15,7 @@ export default function PostsPage() {
     return (
         <>
             <Banner title={'Blog de programación'} image={'/images/bloggin.png'} />
-            <section className="mt-16 container mx-auto px-2 lg:px-22 xl:px-28 2xl:px-52 grid lg:grid-cols-3 gap-6 ">
+            <section className="pt-24 container mx-auto px-2 lg:w-[740px] ">
                 <ListOfPosts posts={posts} />
             </section>
         </>

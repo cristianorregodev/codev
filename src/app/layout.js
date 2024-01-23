@@ -1,3 +1,4 @@
+import '@fontsource-variable/onest';
 import { Navbar } from '@/components/Navbar'
 import { DarkModeProvider } from './providers/DarkModeProvider'
 import './globals.css'

@@ -1,6 +1,6 @@
 export const Container = ({ children, id = '' }) => {
     return (
-        <section className="container mx-auto px-2 lg:px-22 xl:px-28  2xl:px-52" id={id}>
+        <section className="pt-24 container mx-auto px-2 lg:w-[740px]" id={id}>
             {children}
         </section>
     )

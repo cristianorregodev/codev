@@ -122,7 +122,7 @@ export const PROJECTS = [
         title: 'Instapets PWA',
         slug: 'instapets-pwa',
         category: 'Frontend',
-        date: '2022-12-30',
+        date: '2022-02-30',
         content: {
             abstract:
                 'Aplicación Web Progresiva inspirada en instagram pero enfocada en mascotas, como lo indica el tipo de aplicación web, esta se puede instalar en el teléfono móvil y simular el funcionamiento de una App Móvil, cuenta con tecnologías de backend y frontend.',

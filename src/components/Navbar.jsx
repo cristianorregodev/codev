@@ -15,12 +15,12 @@ export const Navbar = () => {
     }
     return (
         <header className="backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 fixed w-full z-20 top-0 left-0">
-            <nav className="container px-2 lg:px-22 xl:px-28 2xl:px-52 flex flex-wrap items-center justify-between mx-auto py-4 ">
+            <nav className="container px-2 lg:max-w-[800px] flex flex-wrap items-center justify-between mx-auto py-4 ">
                 <Link
                     href="/"
-                    className="flex gap-2 items-center self-center text-3xl font-bold whitespace-nowrap text-primary-600 dark:text-primary-400"
+                    className="flex gap-2 items-center self-center text-3xl font-black whitespace-nowrap text-primary-600 dark:text-primary-400"
                 >
-                    <Image src={'/images/logo.svg'} width={40} height={40} alt="logo" />
+                    {/* <Image src={'/images/logo.svg'} width={40} height={40} alt="logo" /> */}
                     codev
                 </Link>
                 <div className="md:order-2">
