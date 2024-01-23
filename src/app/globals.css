@@ -5,6 +5,9 @@
 html {
     scroll-behavior: smooth;
 }
+body{
+    font-family: 'Onest Variable', sans-serif;
+}
 body::before {
     content: '';
     background: rgba(0, 153, 255, 0.24);
