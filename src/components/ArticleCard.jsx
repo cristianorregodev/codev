@@ -6,30 +6,29 @@ import { ShowDate } from './ShowDate'
 export const ArticleCard = ({ article }) => {
     return (
         <Link href={`/posts/${article.slug}`} className="w-full">
-            <article className="grid grid-cols-[1fr,2fr] gap-3 p-2 items-center lg:grid-cols-1 md:p-4 bg-dark-50  hover:scale-[1.02] hover:bg-dark-100 dark:hover:bg-dark-900 rounded-lg shadow dark:shadow-dark-900 dark:bg-dark-950  transition-all duration-300">
-                <header>
-                    <Image
-                        src={article?.cover}
-                        alt={article?.title}
-                        width={1000}
-                        height={1000}
-                        className="rounded-xl"
-                    />
-                </header>
-                <section className=" text-dark-700 dark:text-dark-200 grid ">
-                    <h1 className="text-primary-600 dark:text-primary-400 font-bold text-base tracking-tight mb-2 lg:text-lg">
-                        {article.title}
-                    </h1>
-                    <p className="hidden lg:visible text-sm text-dark-700 dark:text-dark-200 lg:line-clamp-2 lg:text-lg ">
-                        {article?.description}
-                    </p>
-
-                    <footer className="pt-2">
+            <article
+                key={article.slug}
+                className="mt-4 flex gap-x-6 px-4 py-6 rounded-xl shadow-lg items-center hover:scale-[1.02] transition-transform dark:shadow-dark-900"
+            >
+                <picture className=" w-1/4 rounded-lg overflow-hidden shadow-md ">
+                    <img src={article?.cover} alt={article?.title} className="w-full object-cover" />
+                </picture>
+                <section className="w-3/4">
+                    <header>
                         <ShowDate date={article?.date} />
-                        <span className="bg-dark-200 dark:bg-dark-700 rounded px-2 py-0.5 text-dark-700 dark:text-dark-200 text-sm ">
-                            {article.tags}
-                        </span>
-                    </footer>
+                        <h1 className="text-primary-700 dark:text-primary-400 font-bold text-lg">{article?.title}</h1>
+                    </header>
+                    <div>
+                        <p className="hidden lg:visible lg:line-clamp-1 text-dark-700 dark:text-dark-200 ">
+                            {article?.description}
+                        </p>
+                        <ul className="flex gap-x-6 mt-3">
+                            <li className="rounded-full bg-dark-200 dark:bg-dark-700 text-sm px-2">{article?.tags}</li>
+                            <li className="rounded-full bg-dark-200 dark:bg-dark-700 text-sm px-2">
+                                {article?.author}
+                            </li>
+                        </ul>
+                    </div>
                 </section>
             </article>
         </Link>
