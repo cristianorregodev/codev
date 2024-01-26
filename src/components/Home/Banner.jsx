@@ -6,13 +6,14 @@ import GitHubIcon from '../icons/GitHub'
 import LinkedInIcon from '../icons/LinkedIn'
 export const Banner = () => {
     return (
-        <section className="relative mx-auto container px-2 pt-28 lg:h-screen overflow-hidden lg:pt-0 lg:w-[740px] lg:flex lg:flex-col lg:justify-center">
+        <section className="relative mx-auto container px-2 pt-44 lg:h-screen overflow-hidden lg:pt-0 lg:w-[740px] lg:flex lg:flex-col lg:justify-center">
             <div className="text-left lg:flex lg:flex-row-reverse lg:justify-center lg:items-center md:gap-x-4">
                 <div className="Hero-image flex justify-center mb-6 w-16 lg:w-1/5 ">
                     <img
                         src="/images/profile.svg"
                         alt=""
                         className="drop-shadow-lg w-full rounded-full  object-contain shadow-lg dark:shadow-dark-800"
+                        loading="lazy"
                     />
                 </div>
                 <header className="lg:w-4/5">

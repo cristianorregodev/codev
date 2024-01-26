@@ -5,10 +5,10 @@
 html {
     scroll-behavior: smooth;
 }
-body{
+body {
     font-family: 'Onest Variable', sans-serif;
 }
-body::before {
+/* body::before {
     content: '';
     background: rgba(0, 153, 255, 0.24);
     filter: blur(100px);
@@ -18,7 +18,7 @@ body::before {
     right: 50px;
     top: 100px;
     z-index: -1;
-}
+} */
 #banner-page::after {
     content: '';
     position: absolute;
@@ -33,7 +33,7 @@ body::before {
 #article-body h3 {
     font-size: 26px;
     font-weight: bold;
-    color: #0891b2;
+    color: #008fd4;
     margin: 10px 0;
 }
 #article-body figure {
@@ -44,7 +44,6 @@ body::before {
 }
 
 #article-body img {
-    margin: 24px 0;
     border-radius: 8px;
     width: 100%;
     box-shadow: 4px 10px 10px -3px rgba(117, 117, 117, 0.1);
@@ -69,19 +68,19 @@ body::before {
 }
 
 #article-body p > strong {
-    color: #0891b2;
+    color: #008fd4;
 }
 
 .dark #article-body h2,
 .dark #article-body h3 {
-    color: #22d3ee;
+    color: #2cc9ff;
 }
 .dark #article-body p {
     color: #e2e8f0;
 }
 
 .dark #article-body p > strong {
-    color: #22d3ee;
+    color: #2cc9ff;
 }
 
 #article-body figure.table {
@@ -92,7 +91,7 @@ body::before {
     padding: 12px;
     margin: 30px auto;
     max-width: 100%;
-    border: solid 1px #0891b2;
+    border: solid 1px #008fd4;
     border-collapse: unset;
 }
 
@@ -101,7 +100,7 @@ body::before {
 }
 
 #article-body table tr:first-child {
-    color: #0891b2;
+    color: #008fd4;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -109,7 +108,7 @@ body::before {
     padding: 10px 20px;
 }
 #article-body table td a {
-    color: #0891b2;
+    color: #008fd4;
     font-weight: 600;
     transition: all 0.5s ease;
 }
@@ -118,13 +117,13 @@ body::before {
 }
 
 .dark #article-body table {
-    border: solid 1px #22d3ee;
+    border: solid 1px #2cc9ff;
 }
 .dark #article-body table tr:first-child {
-    color: #22d3ee;
+    color: #2cc9ff;
 }
 .dark #article-body table td a {
-    color: #22d3ee;
+    color: #2cc9ff;
 }
 
 #article-body ul,
@@ -151,7 +150,7 @@ body::before {
 }
 #article-body ul strong,
 #article-body ol strong {
-    color: #0891b2;
+    color: #008fd4;
 }
 #article-body blockquote {
     padding-left: 1.5em;
@@ -176,7 +175,7 @@ body::before {
 
 .dark #article-body ul strong,
 #article-body ol strong {
-    color: #22d3ee;
+    color: #2cc9ff;
 }
 
 @keyframes scrollR {
@@ -257,7 +256,7 @@ body::before {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #0891b2;
+    background: #008fd4;
     border-radius: 10px;
 }
 
@@ -267,6 +266,6 @@ body::before {
 }
 
 *::selection {
-    background-color: #0891b2; /* No changes to pixel values */
+    background-color: #008fd4; /* No changes to pixel values */
     color: white; /* No changes to pixel values */
 }

@@ -13,6 +13,7 @@ export const About = () => {
                         src="/images/cristian_orrego.webp"
                         alt="Programador mirando a la cámara con escritorio atrás"
                         className=" object-cover rounded-full size-72 shadow-lg shadow-dark-900/20 dark:shadow-dark-50/10  mx-auto"
+                        loading="lazy"
                     />
 
                     <p className="mt-8 text-dark-700 dark:text-dark-200 md:w-11/12 text-pretty text-base">

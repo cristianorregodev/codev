@@ -33,7 +33,8 @@ export const Projects = async () => {
                         <img
                             className="w-full h-full min-h-[232px] object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-300"
                             src={sorted[0].content.images.cover}
-                            alt=""
+                            alt={sorted[0].title}
+                            loading="lazy"
                         />
                     </figure>
                     <div className="p-6">
@@ -66,7 +67,8 @@ export const Projects = async () => {
                         <img
                             className="w-full h-full min-h-[232px] object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-300"
                             src={sorted[1].content.images.cover}
-                            alt=""
+                            alt={sorted[1].title}
+                            loading="lazy"
                         />
                     </figure>
                     <div className="p-6">
@@ -100,7 +102,8 @@ export const Projects = async () => {
                         <img
                             className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-300"
                             src={sorted[2].content.images.cover}
-                            alt=""
+                            alt={sorted[2].title}
+                            loading="lazy"
                         />
                     </figure>
                     <div className="p-6 md:w-1/2">

@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import { BASE_API_URL } from '@/config'
 import Link from 'next/link'
 export const ProjectCard = ({ project }) => {
     return (
         <Link
             href={`/projects/${project.slug}`}
-            className="group max-w-sm lg:max-w-full min-h-fit bg-dark-50  rounded-xl shadow dark:bg-dark-900 dark:border-dark-700"
+            className="group max-w-sm lg:max-w-full min-h-full bg-dark-50  rounded-xl shadow-lg dark:bg-dark-900 dark:border-dark-700"
         >
             <div className="relative h-48 w-full overflow-hidden rounded-t-xl ">
                 <span className="absolute top-2 right-2 backdrop-blur-md bg-dark-600/50 py-1 px-2 rounded-lg z-10 text-sm font-semibold text-dark-100 ">

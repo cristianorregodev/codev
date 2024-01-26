@@ -43,7 +43,7 @@ export const experienceInfo = [
     {
         role: 'Técnico de soporte',
         date: 'Diciembre 2018 - Diciembre 2019',
-        company: 'La Sucursal Ferreteria',
+        company: 'La Sucursal',
         description:
             'Desarrollar calculdaora de simulación de costos para materiales de construcción. Administrar y dar soporte técnico al software contable y de facturación. Implementar herramientas de gestión de la comunicación y trabajo en equipo.',
     },

@@ -12,7 +12,7 @@ export default function ProjectsPage() {
     return (
         <>
             <Banner title={'Portafolio de proyectos'} />
-            <section className="mt-16 container mx-auto px-2 lg:w-[740px] grid gap-4 place-items-center md:grid-cols-2 md:gap-6 lg:grid-cols-2 ">
+            <section className="mt-16 container mx-auto px-2 lg:w-[740px] grid gap-4 place-items-center md:grid-cols-2 md:gap-6 ">
                 <Suspense>
                     <ListOfProjects />
                 </Suspense>

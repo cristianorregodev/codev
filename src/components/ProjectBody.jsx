@@ -17,14 +17,11 @@ export const ProjectBody = ({ data }) => {
     return (
         <section className="container mx-auto px-2 lg:px-22 xl:px-28 2xl:max-w-[1200px] mt-10">
             <header className="mt-24 lg:mt-28 mb-8 lg:mb-12 max-w-[800px] mx-auto lg:flex lg:items-center lg:gap-6">
-                <Image
-                    className="rounded-lg h-auto w-full lg:w-1/3"
+                <img
                     src={data?.content?.images?.cover}
                     alt={data.title}
-                    width={300}
-                    height={300}
-                    quality={100}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="rounded-lg h-auto w-full lg:w-1/3"
+                    sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 960px"
                 />
                 <div>
                     <h1 className="text-4xl font-bold text-primary-600 dark:text-primary-400 my-4 lg:my-0 lg:mb-4">
@@ -145,15 +142,11 @@ export const ProjectBody = ({ data }) => {
                     <h2>Resumen</h2>
                     <p>{data?.content?.abstract}</p>
                 </article>
-
-                <Image
-                    className="rounded-lg overflow-hidden my-6 w-full shadow-md"
+                <img
                     src={data?.content?.images?.screenshot}
                     alt={data.title}
-                    width={1000}
-                    height={1000}
-                    quality={100}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="rounded-xl overflow-hidden my-6 w-full shadow-md my-6"
+                    sizes="(max-width: 768px) 100%, (max-width: 1200px) 960px"
                 />
 
                 <article className="">
@@ -189,17 +182,14 @@ export const ProjectBody = ({ data }) => {
                 </section>
 
                 <h2>Galeria</h2>
-                <section className="grid md:grid-cols-2  gap-4">
+                <section className="grid md:grid-cols-2 md:grid-rows-2 gap-4">
                     {Object.values(images).map((image, idx) => (
-                        <Image
+                        <img
                             key={idx}
-                            className="h-[256px] max-w-full rounded-lg object-cover shadow-md"
+                            className="w-full rounded-lg object-cover shadow-md my-0"
                             src={image}
                             alt={data.title}
-                            width={1000}
-                            height={1000}
-                            quality={100}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 960px"
                         />
                     ))}
                 </section>

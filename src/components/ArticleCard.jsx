@@ -11,7 +11,7 @@ export const ArticleCard = ({ article }) => {
                 className="mt-4 flex gap-x-6 px-4 py-6 rounded-xl shadow-lg items-center hover:scale-[1.02] transition-transform dark:shadow-dark-900"
             >
                 <picture className=" w-1/4 rounded-lg overflow-hidden shadow-md ">
-                    <img src={article?.cover} alt={article?.title} className="w-full object-cover" />
+                    <img src={article?.cover} alt={article?.title} className="w-full object-cover" loading="lazy" />
                 </picture>
                 <section className="w-3/4">
                     <header>
