@@ -30,6 +30,7 @@ export const Navbar = () => {
                                 href="https://www.linkedin.com/in/cristianorregod/"
                                 target="_blank"
                                 className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
+                                aria-label="Visit my LinkedId profile"
                             >
                                 <FaLinkedinIn />
                             </a>
@@ -39,6 +40,7 @@ export const Navbar = () => {
                                 href="https://github.com/cristianorregodev"
                                 target="_blank"
                                 className="text-dark-700 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
+                                aria-label="Visit my Github profile"
                             >
                                 <FaGithub />
                             </a>
