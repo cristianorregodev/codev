@@ -25,11 +25,11 @@ export const Banner = () => {
                     </span>
                     <h2 className="lg:text-2xl mt-6 md:mt-10 text-dark-700 dark:text-dark-200 text-pretty">
                         +3 años de experiencia.{' '}
-                        <span className="text-crusta-700 dark:text-crusta-300 ">
+                        <span className="text-crusta-800 dark:text-crusta-300 ">
                             Ingeniero de Sistemas y Desarrollador Web
                         </span>
                         .{' '}
-                        <span className=" text-daintree-600 dark:text-daintree-200 ">
+                        <span className=" text-daintree-700 dark:text-daintree-200 ">
                             Especializado en crear soluciones web robustas
                         </span>
                         . Escribo artículos sobre programación.

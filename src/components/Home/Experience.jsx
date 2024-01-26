@@ -26,8 +26,8 @@ export const Experience = () => {
                                 </svg>
                             </span>
                             <h3 className="flex items-center gap-2 mb-1 text-lg font-semibold text-primary-700 dark:text-primary-400">
-                                {experience.role} <span class="text-white font-normal">-</span>
-                                <span className="text-sm text-crusta-700/90 dark:text-crusta-300/90">
+                                {experience.role} <span class="dark:text-white text-dark-700 font-normal">-</span>
+                                <span className="text-sm text-crusta-800 dark:text-crusta-300/90">
                                     {experience.company}
                                 </span>
                             </h3>

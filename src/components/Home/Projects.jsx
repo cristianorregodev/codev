@@ -38,7 +38,7 @@ export const Projects = async () => {
                         />
                     </figure>
                     <div className="p-6">
-                        <h1 className="font-bold text-lg text-primary-600 dark:text-primary-400">{sorted[0].title}</h1>
+                        <h1 className="font-bold text-lg text-primary-700 dark:text-primary-400">{sorted[0].title}</h1>
                         <p className="line-clamp-3 mt-4 text-dark-700 dark:text-dark-200">
                             {sorted[0].content.description}
                         </p>
@@ -72,7 +72,7 @@ export const Projects = async () => {
                         />
                     </figure>
                     <div className="p-6">
-                        <h1 className="font-bold text-lg text-primary-600 dark:text-primary-400">{sorted[1].title}</h1>
+                        <h1 className="font-bold text-lg text-primary-700 dark:text-primary-400">{sorted[1].title}</h1>
                         <p className="line-clamp-3 mt-4 text-dark-700 dark:text-dark-200">
                             {sorted[1].content.description}
                         </p>
@@ -107,7 +107,7 @@ export const Projects = async () => {
                         />
                     </figure>
                     <div className="p-6 md:w-1/2">
-                        <h1 className="font-bold text-lg text-primary-600 dark:text-primary-400">{sorted[2].title}</h1>
+                        <h1 className="font-bold text-lg text-primary-700 dark:text-primary-400">{sorted[2].title}</h1>
                         <p className="line-clamp-3 mt-4 text-dark-700 dark:text-dark-200">
                             {sorted[2].content.description}
                         </p>

@@ -32,7 +32,10 @@ export const ThemeSwitch = ({ show = true }) => {
     }
 
     return (
-        <button className={`bg-dark-300 dark:bg-dark-700 p-1 rounded-md  ${!show && 'md:hidden'}`}>
+        <button
+            className={`bg-dark-300 dark:bg-dark-700 p-1 rounded-md  ${!show && 'md:hidden'}`}
+            name="theme-switcher"
+        >
             {currentTheme === 'dark' ? (
                 <IoMdSunny
                     size={20}

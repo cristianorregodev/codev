@@ -18,19 +18,19 @@ export const About = () => {
 
                     <p className="mt-8 text-dark-700 dark:text-dark-200 md:w-11/12 text-pretty text-base">
                         Hola 👋, soy Cristian Orrego,{' '}
-                        <span className="font-bold text-primary-600 dark:text-primary-400">Ingeniero en Sistemas</span>{' '}
+                        <span className="font-bold text-primary-700 dark:text-primary-400">Ingeniero en Sistemas</span>{' '}
                         y{' '}
-                        <span className="font-bold text-primary-600 dark:text-primary-400">
+                        <span className="font-bold text-primary-700 dark:text-primary-400">
                             Desarrollador FullStack.
                         </span>{' '}
                         Inicié en la programación como un hobby hace poco más de 4 años. Hoy estoy{' '}
-                        <span className=" text-crusta-700/90 dark:text-crusta-300 font-bold">
+                        <span className=" text-crusta-800 dark:text-crusta-300 font-bold">
                             liderando un equipo de desarrollo en una empresa con mercado internacional.
                         </span>{' '}
                     </p>
                     <p className="mt-4 text-dark-700 dark:text-dark-200 md:w-11/12 text-pretty text-base">
                         Entre mis logros destaco el{' '}
-                        <span className="text-crusta-700/90 dark:text-crusta-300 font-bold">
+                        <span className="text-crusta-800 dark:text-crusta-300 font-bold">
                             desarrollo e implementación de estándares de código y metodologías de desarrollo en{' '}
                             <a
                                 href="https://colraices.com"
@@ -45,7 +45,7 @@ export const About = () => {
                     </p>
                     <p className="mt-4 text-dark-700 dark:text-dark-200 md:w-11/12 text-pretty text-base">
                         Como proyecto personal comparto{' '}
-                        <Link href={'/posts'} className="text-crusta-700/90 dark:text-crusta-300 font-bold underline">
+                        <Link href={'/posts'} className="text-crusta-800 dark:text-crusta-300 font-bold underline">
                             artículos de blog sobre programación
                         </Link>
                         . Cuando compartes tu conocimiento es cuando más aprendes y mi objetivo además de seguir
