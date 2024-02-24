@@ -23,7 +23,7 @@ export const Banner = () => {
                     <span className=" font-semibold inline-flex animate-background-shine bg-[linear-gradient(110deg,#64748b,45%,#0f172a,55%,#64748b)] dark:bg-[linear-gradient(110deg,#b6eaff,45%,#065074,55%,#b6eaff)] bg-[length:250%_100%] bg-clip-text text-xl text-transparent">
                         Desarrollador Fullstack
                     </span>
-                    <h2 className="lg:text-2xl mt-6 md:mt-10 text-dark-700 dark:text-dark-200 text-pretty">
+                    <h2 className="lg:text-xl mt-6 md:mt-10 text-dark-700 dark:text-dark-200 text-pretty">
                         +3 años de experiencia.{' '}
                         <span className="text-crusta-800 dark:text-crusta-300 ">
                             Ingeniero de Sistemas y Desarrollador Web
@@ -32,7 +32,7 @@ export const Banner = () => {
                         <span className=" text-daintree-700 dark:text-daintree-200 ">
                             Especializado en crear soluciones web robustas
                         </span>
-                        . Escribo artículos sobre programación.
+                        . Enseño programación a estudiantes de último grado de bachiller.
                     </h2>
                 </header>
             </div>
@@ -52,16 +52,16 @@ export const Banner = () => {
                         <EmailIcon className="size-4 md:size-6" /> cristian.duquew@gmail.com
                     </Pill>
                 </li>
-                <li>
+                {/* <li>
                     <Pill url={'#projects'}>
                         <CodeIcon className="size-4 md:size-6" /> Proyectos
                     </Pill>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                     <Pill url={'#articles'}>
                         <ArticleIcon className="size-4 md:size-6" /> Artículos
                     </Pill>
-                </li>
+                </li> */}
             </ul>
             <div className="absolute hidden md:flex bottom-4 w-full justify-center">
                 <a
