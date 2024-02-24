@@ -11,8 +11,8 @@ export const Footer = () => {
                 </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                     <li>
-                        <Link href="/" className="mr-4 hover:underline md:mr-6 ">
-                            Inicio
+                        <Link href="/projects" className="mr-4 hover:underline md:mr-6">
+                            Proyectos
                         </Link>
                     </li>
                     <li>
@@ -21,11 +21,26 @@ export const Footer = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/projects" className="mr-4 hover:underline md:mr-6">
-                            Proyectos
+                        <Link href="/posts" className="mr-4 hover:underline md:mr-6 ">
+                            Blog
                         </Link>
                     </li>
                 </ul>
+            </div>
+            <div className="mt-8 flex justify-center opacity-70">
+                <small className="text-dark-700 dark:text-dark-200 text-center">
+                    {' '}
+                    Inspirado en{' '}
+                    <a
+                        href="https://porfolio.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-primary-700 dark:text-primary-400 font-bold"
+                    >
+                        porfolio.dev
+                    </a>{' '}
+                    de <span className="font-bold">midudev</span>
+                </small>
             </div>
         </footer>
     )
