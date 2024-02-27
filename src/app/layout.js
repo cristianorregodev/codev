@@ -1,4 +1,4 @@
-import '@fontsource-variable/onest';
+import '@fontsource-variable/onest'
 import { Navbar } from '@/components/Navbar'
 import { DarkModeProvider } from './providers/DarkModeProvider'
 import './globals.css'
@@ -13,7 +13,7 @@ export const metadata = {
         title: 'Cristian Orrego Dev 👨‍💻 | FullStack, React, Next, Laravel, NodeJS, Desarrollo',
         description:
             'Hola 👋, soy Cristian Orrego, Ingeniero de Sistemas y Desarrollador FullStack con más de 3 años de experiencia. Este es mi portafolio personal, te invito a que conozcas un poco sobre mi trabajo.',
-        images: ['/images/og.png'],
+        images: ['/images/og.webp'],
         siteName: 'cristianorrego.dev',
         type: 'website',
         locale: 'es_ES',

@@ -10,9 +10,11 @@ export const Banner = () => {
             <div className="text-left lg:flex lg:flex-row-reverse lg:justify-center lg:items-center md:gap-x-4">
                 <div className="Hero-image flex justify-center mb-6 w-16 lg:w-1/5 ">
                     <img
-                        src="/images/profile.svg"
-                        alt=""
-                        className="drop-shadow-lg w-full rounded-full  object-contain shadow-lg dark:shadow-dark-800"
+                        src="/images/profile-new.svg"
+                        alt="Cristian Orrego Dev"
+                        width={200}
+                        height={200}
+                        className="drop-shadow-sm w-[130px] rounded-full  object-contain shadow-lg dark:shadow-dark-900"
                         loading="lazy"
                     />
                 </div>
