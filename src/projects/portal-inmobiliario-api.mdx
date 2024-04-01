@@ -1,0 +1,94 @@
+---
+title: 'Portal inmobiliario API y CMS'
+category: 'Fullstack'
+date: '2022-03-30'
+excerpt: Mediante el uso de tecnologías de Backend se construye un servicio API con el propósito de permitir el consumo de los recursos en diferentes servicios mediante el método GET a traves de diferentes endpoints.
+cover: '/images/cms-vc/cover.webp'
+stack:
+    - Laravel
+    - MySQL
+    - PHP
+    - JavaScript
+---
+
+El proyecto Backend esta construido en Laravel y se compone principalmente de dos apartados, uno de ellos el sistema de gestión de inmuebles donde el usuario pueda realizar toda la gestión de inmuebles (CREAR, EDITAR, ELIMINAR) y el segundo el servicio API el cual es usado por diferentes clientes para mostrar la información de los inmuebles en interfaces personalizadas.
+
+## Funcionalidades
+
+El proyecto al contar no solo con el API sino también con el gestor de contenidos, dispone de las siguientes caracerísticas generales.
+
+-   **API REST de Inmuebles**: Cuenta con un API que permite filtrar inmuebles por diferentes atributos, marcar inmueble como favorito, listar los inmuebles por región y desde luego ver el detalle específico de un inmueble.
+-   **CMS de Inmuebles**: El sistema gestión de contenidos personalizado utilizando Laravel, ofrece una interfaz sencilla que permite gestionar con operaciones CREATE, EDIT y DELETE. Además del recurso de inmueble también se pueden gestionar otros recursos como las ciudades, atributos o categorias.
+-   **Base de Datos MySQL**: Se garantiza la integridad de la información gracias a la implementación de una base de datos robusta que dispone de las relaciones necesarias para el correcto funcionamiento del sistema.
+-   **Autenticación y Seguridad**: El CMS cuenta con un sistema de autenticación y validación de roles de usuario, esto permite que usuarios no autorizados queden inhabilitados para acceder o modificar información sensible.
+
+## CMS preview
+
+<div class="mdx-gallery">
+    <img src="/images/cms-vc/screenshot.webp" alt="Panel de administración" loading="lazy" />
+    <br />
+    <img src="/images/cms-vc/responsive.webp" alt="Panel de administración" loading="lazy" />
+    <br />
+    <img src="/images/cms-vc/mockup.webp" alt="Panel de administración" loading="lazy" />
+</div>
+## Documentación API
+
+Descripción básica de la especificación API desarrollada para el consumo de los recursos disponibles del Portal Inmobiliario. Se detalla la especificación de los diferentes endpoints y métodos disponibles.
+
+#### Obtener el listado de inmuebles
+
+<details>
+ <summary><code>GET</code> <code><b>/api/v1/properties</b></code> <code>(Obtiene listado de inmuebes con datos básicos)</code></summary>
+
+##### Parámetros
+
+> Sin parámetros
+
+##### Respuestas
+
+| http code | content-type       | response                                 |
+| --------- | ------------------ | ---------------------------------------- |
+| `200`     | `application/json` | `{"data": [...]}`                        |
+| `400`     | `application/json` | `{"code":"400","message":"Bad Request"}` |
+
+##### Ejemplo con fetch
+
+```javascript
+fetch('/api/v1/properties')
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log('error', error))
+```
+
+</details>
+
+---
+
+#### Obtener detalle del inmueble
+
+<details>
+ <summary><code>GET</code> <code><b>/api/v1/properties/{slug}</b></code> <code>(Especificación detallada del inmueble)</code></summary>
+
+##### Parámetros
+
+| name   | type     | data-type | description                      |
+| ------ | -------- | --------- | -------------------------------- |
+| `slug` | required | string    | Atributo slug único del inmueble |
+
+##### Respuestas
+
+| http code | content-type       | response                                 |
+| --------- | ------------------ | ---------------------------------------- |
+| `200`     | `application/json` | `{"data": {...}}`                        |
+| `400`     | `application/json` | `{"code":"400","message":"Bad Request"}` |
+
+##### Ejemplo con fetch
+
+```javascript
+fetch('/api/v1/properties/{slug}')
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log('error', error))
+```
+
+</details>

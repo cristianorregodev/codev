@@ -93,3 +93,138 @@ export const MY_STACK = {
         { name: 'WordPress', icon: WordPressIcon },
     ],
 }
+
+export const MY_SERVICES = [
+    {
+        id: 'web-corporativa',
+        subtitle: 'Web corporativa',
+        title: {
+            text: 'Destaca con una web corporativa de',
+            span: 'impacto',
+        },
+        description:
+            'Aprovecha al máximo tu presencia en línea con una web corporativa. Diseñada para destacar, esta solucion te ofrece un sitio en internet sólido para tu empresa o emprendimiento, con una serie de beneficios clave',
+        benefits: [
+            'Proyección Profesional: Transmita confianza y credibilidad a sus clientes con un diseño corporativo impecable.',
+            'Experiencia de Usuario Optimizada: Navegación intuitiva y estructura clara para una experiencia de usuario excepcional.',
+            'Personalización Total: Desde la paleta de colores hasta la disposición de contenido, cada detalle se adapta a sus necesidades.',
+            'SEO Integrado: Posicione su empresa en los motores de búsqueda y aumente su visibilidad en línea.',
+            'Escalabilidad: Preparada para crecer con su empresa, nuestra web corporativa se adapta a sus necesidades en constante evolución.',
+        ],
+        projects: [
+            {
+                image: '/images/colraices/cover.webp',
+                url: 'https://colraices.com',
+                title: 'Colraices',
+            },
+            {
+                image: '/images/colraices/cover.webp',
+                url: 'https://agenciamomentum.co',
+                title: 'Momentum',
+            },
+            {
+                image: '/images/colraices/cover.webp',
+                url: 'https://diocesanosantamaria.edu.co',
+                title: 'Diocesano SM',
+            },
+            {
+                image: '/images/colraices/cover.webp',
+                url: 'https://valentiaenergía.com',
+                title: 'ValentiaEnergia',
+            },
+        ],
+        button: {
+            text: 'Quiero mi web',
+            url: 'https://api.whatsapp.com/send?phone=+573113988094&text=Hola+%F0%9F%AB%A1%2C+estoy+interesado+en+el+desarrollo+de+una+web+corporativa+%F0%9F%8C%90+y+me+gustar%C3%ADa+ampliar+la+informaci%C3%B3n+sobre+este+servicio.',
+        },
+        reverse: false,
+    },
+    {
+        id: 'tienda-en-linea',
+        subtitle: 'E-commerce',
+        title: {
+            text: 'Impulse su negocio en internet con un',
+            span: 'e-commerce',
+        },
+        description:
+            'Amplia el alcance y aumente sus ventas con una tienda en línea. Esta solución ofrece una plataforma robusta para su tienda en línea, con los siguientes beneficios:',
+        benefits: [
+            'Exposición Global: Llegue a un público más amplio y abra nuevas oportunidades de negocio a nivel nacional e internacional.',
+            'Personalización Avanzada: Desde la apariencia visual hasta las funcionalidades específicas, cada aspecto se adapta a las necesidades de su negocio.',
+            'SEO Integrado: Mejore su visibilidad en línea y aumente el tráfico a su tienda con un sólido enfoque en SEO.',
+            'Gestión de Productos: Mantenga un control preciso de sus productos y simplifique la gestión de ofertas, remates y nuevos lanzamientos.',
+            'Escalabilidad: Prepárese para el crecimiento con una plataforma flexible que se adapta a las necesidades cambiantes de su negocio.',
+        ],
+        projects: [
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices',
+            },
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices2',
+            },
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices3',
+            },
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices4',
+            },
+        ],
+        button: {
+            text: 'Quiero mi E-commerce',
+            url: 'https://api.whatsapp.com/send?phone=+573113988094&text=Hola+%F0%9F%AB%A1%2C+estoy+interesado+en+el+desarrollo+de+una+tienda+en+linea+%F0%9F%8C%90+y+me+gustar%C3%ADa+ampliar+la+informaci%C3%B3n+sobre+este+servicio.',
+        },
+        reverse: true,
+    },
+    {
+        id: 'software-a-la-medida',
+        subtitle: 'A la medida',
+        title: {
+            text: 'Aumenta la productividad con',
+            span: 'software personalizado',
+        },
+        description:
+            'Potencie su empresa ó emprendimiento con software a medida. Podrá satisfacer sus necesidades específicas, esta solución ofrece una serie de beneficios clave para automatizar procesos y optimizar la eficiencia:',
+        benefits: [
+            'Adaptabilidad Total: Diseñamos soluciones que se ajustan perfectamente a los procesos y flujos de trabajo de su empresa.',
+            'Eficiencia Mejorada: Automatice tareas repetitivas y aumente la productividad de su equipo.',
+            'Experiencia de Usuario Superior: Desarrollamos interfaces intuitivas y fáciles de usar para una experiencia de usuario excepcional.',
+            'Escalabilidad: Prepárese para el crecimiento futuro con soluciones flexibles que se adaptan a medida que su empresa evoluciona.',
+            'Soporte Continuo: Ofrecemos soporte técnico continuo para garantizar que su software funcione de manera óptima en todo momento.',
+        ],
+        projects: [
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices',
+            },
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices2',
+            },
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices3',
+            },
+            {
+                image: '/images/momentum/cover.webp',
+                url: 'https:/colraices.com',
+                title: 'Colraices4',
+            },
+        ],
+        button: {
+            text: 'Quiero una solución',
+            url: 'https://api.whatsapp.com/send?phone=+573113988094&text=Hola+%F0%9F%AB%A1%2C+estoy+interesado+en+el+desarrollo+de+un+software+a+medida+%F0%9F%8C%90+y+me+gustar%C3%ADa+ampliar+la+informaci%C3%B3n+sobre+este+servicio.',
+        },
+        reverse: false,
+    },
+]

@@ -1,5 +1,6 @@
 import { Banner } from '@/components/Banner'
 import { ListOfProjects } from '@/components/Projects/ListOfProjects'
+import { getAllPostsMetadata } from '@/lib/mdx'
 import { Suspense } from 'react'
 export const metadata = {
     title: 'Cristian Orrego Dev 👨‍💻 | Portafolio',
@@ -9,12 +10,13 @@ export const metadata = {
     author: 'cristianorregodev',
 }
 export default function ProjectsPage() {
+    const projects = getAllPostsMetadata(process.env.PROJECTS_PATH)
     return (
         <>
             <Banner title={'Portafolio de proyectos'} />
             <section className="mt-16 container mx-auto px-2 lg:w-[740px] grid gap-4 place-items-center md:grid-cols-2 md:gap-6 ">
                 <Suspense>
-                    <ListOfProjects />
+                    <ListOfProjects projects={projects} />
                 </Suspense>
             </section>
         </>

@@ -1,8 +1,9 @@
 import { getPostBySlug, getPosts } from '@/lib/mdx'
 import { ArticleBody } from '@/components/ArticleBody'
+import 'highlight.js/styles/atom-one-dark.css'
 
 export async function generateStaticParams() {
-    const posts = getPosts()
+    const posts = getPosts(process.env.ARTICLES_PATH)
     const paths = posts.map((post) => ({
         slug: post.replace(/\.mdx?$/, ''),
     }))
@@ -11,7 +12,7 @@ export async function generateStaticParams() {
 }
 export async function generateMetadata({ params }, parent) {
     const { slug } = params
-    const { frontmatter } = await getPostBySlug(slug)
+    const { frontmatter } = await getPostBySlug(slug, process.env.ARTICLES_PATH)
     const previousImages = (await parent).openGraph?.images || []
 
     return {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }, parent) {
 }
 
 export default async function PostPage({ params }) {
-    const { content, frontmatter } = await getPostBySlug(params.slug)
+    const { content, frontmatter } = await getPostBySlug(params.slug, process.env.ARTICLES_PATH)
     return (
         <>
             {/* <Banner image={frontmatter?.cover} title={frontmatter?.title} /> */}

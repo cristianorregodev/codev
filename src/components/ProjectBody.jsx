@@ -1,34 +1,31 @@
 'use client'
 import { useEffect } from 'react'
-import Prism from 'prismjs'
-import '@/helpers/prism.css'
 import Image from 'next/image'
 import { BASE_API_URL } from '@/config'
 import { FaGithub } from 'react-icons/fa'
+import Markdown from 'markdown-to-jsx'
+import hljs from 'highlight.js'
 
-export const ProjectBody = ({ data }) => {
-    const {
-        content: { images },
-    } = data
+export const ProjectBody = ({ content, frontmatter }) => {
     useEffect(() => {
-        Prism.highlightAll()
+        hljs.highlightAll()
     }, [])
 
     return (
         <section className="container mx-auto px-2 lg:px-22 xl:px-28 2xl:max-w-[1200px] mt-10">
             <header className="mt-24 lg:mt-28 mb-8 lg:mb-12 max-w-[800px] mx-auto lg:flex lg:items-center lg:gap-6">
                 <img
-                    src={data?.content?.images?.cover}
-                    alt={data.title}
+                    src={frontmatter?.cover}
+                    alt={frontmatter.title}
                     className="rounded-lg h-auto w-full lg:w-1/3"
                     sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 960px"
                 />
                 <div>
                     <h1 className="text-4xl font-bold text-primary-600 dark:text-primary-400 my-4 lg:my-0 lg:mb-4">
-                        {data.title}
+                        {frontmatter.title}
                     </h1>
-                    <ul className="list-none md:flex md:gap-8 mb-4">
-                        <li className="flex gap-1 items-center text-dark-700 dark:text-dark-200 text-sm">
+                    <ul className="list-none md:flex md:gap-8 mb-4 items-start">
+                        <li className="flex gap-1 items-start text-dark-700 dark:text-dark-200 text-sm min-w-fit">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -43,7 +40,7 @@ export const ProjectBody = ({ data }) => {
                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
                                 />
                             </svg>
-                            {data.date}
+                            {frontmatter.date}
                         </li>
                         <li className="flex gap-1 items-center text-dark-700 dark:text-dark-200 text-sm">
                             <svg
@@ -61,7 +58,7 @@ export const ProjectBody = ({ data }) => {
                                 />
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
                             </svg>
-                            {data.category}
+                            {frontmatter.category}
                         </li>
                         <li className="flex gap-1  text-dark-700 dark:text-dark-200 text-sm">
                             <svg
@@ -80,16 +77,16 @@ export const ProjectBody = ({ data }) => {
                             </svg>
 
                             <p className="flex gap-1 flex-wrap">
-                                {data?.content?.technologies.map((item, idx) => (
-                                    <span key={idx}>{item.name + ','}</span>
+                                {frontmatter?.stack.map((item, idx) => (
+                                    <span key={idx}>{item + ','}</span>
                                 ))}
                             </p>
                         </li>
                     </ul>
                     <div className="flex gap-2">
-                        {data?.link && (
+                        {frontmatter?.link && (
                             <a
-                                href={data?.link}
+                                href={frontmatter?.link}
                                 target="_blank"
                                 className="flex items-center gap-1 text-primary-600 dark:text-primary-400 font-bold hover:underline transition-all duration-200"
                             >
@@ -110,9 +107,9 @@ export const ProjectBody = ({ data }) => {
                                 </svg>
                             </a>
                         )}
-                        {data?.repo && (
+                        {frontmatter?.repo && (
                             <a
-                                href={data?.repo}
+                                href={frontmatter?.repo}
                                 target="_blank"
                                 className="flex items-center gap-1 text-primary-600 dark:text-primary-400 font-bold hover:underline transition-all duration-200"
                             >
@@ -138,61 +135,10 @@ export const ProjectBody = ({ data }) => {
             </header>
 
             <main id="article-body" className="max-w-[800px] mx-auto">
-                <article className="">
-                    <h2>Resumen</h2>
-                    <p>{data?.content?.abstract}</p>
-                </article>
-                <img
-                    src={data?.content?.images?.screenshot}
-                    alt={data.title}
-                    className="rounded-xl overflow-hidden my-6 w-full shadow-md my-6"
-                    sizes="(max-width: 768px) 100%, (max-width: 1200px) 960px"
-                />
-
-                <article className="">
-                    <h2>Descripción del proyecto</h2>
-                    <p className="whitespace-pre-line">{data?.content?.description}</p>
-                </article>
-
-                <figure className="table">
-                    <h2>Tecnologías usadas</h2>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Tecnología</td>
-                                <td>Uso</td>
-                            </tr>
-                            {data?.content?.technologies.map((item) => (
-                                <tr key={item.name}>
-                                    <td>{item.name}</td>
-                                    <td>{item.use}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </figure>
-                <section className="mb-6">
-                    <h2>Características principales</h2>
-                    <p>{data?.content?.features?.intro}</p>
-                    <ul>
-                        {data?.content?.features?.list.map((item, idx) => (
-                            <li key={idx}>{item}</li>
-                        ))}
-                    </ul>
-                </section>
-
-                <h2>Galeria</h2>
-                <section className="grid md:grid-cols-2 md:grid-rows-2 gap-4">
-                    {Object.values(images).map((image, idx) => (
-                        <img
-                            key={idx}
-                            className="w-full rounded-lg object-cover shadow-md my-0"
-                            src={image}
-                            alt={data.title}
-                            sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 960px"
-                        />
-                    ))}
-                </section>
+                <blockquote className="text-dark-700 dark:text-dark-200 bg-dark-100 dark:bg-dark-900 py-4 rounded-md shadow-md text-pretty pr-4 mb-12">
+                    {frontmatter?.excerpt}
+                </blockquote>
+                <Markdown>{content}</Markdown>
             </main>
         </section>
     )

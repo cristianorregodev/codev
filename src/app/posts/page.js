@@ -10,7 +10,7 @@ export const metadata = {
     author: 'cristianorregodev',
 }
 export default function PostsPage() {
-    const posts = getAllPostsMetadata()
+    const posts = getAllPostsMetadata(process.env.ARTICLES_PATH)
 
     return (
         <>

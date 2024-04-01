@@ -7,7 +7,7 @@ import { getAllPostsMetadata } from '@/lib/mdx'
 import { ShowDate } from '../ShowDate'
 
 export const Articles = async () => {
-    const posts = getAllPostsMetadata()
+    const posts = getAllPostsMetadata(process.env.ARTICLES_PATH)
     const articles = posts
         .sort((a, b) => {
             if (a.date < b.date) {

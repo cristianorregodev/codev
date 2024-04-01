@@ -1,11 +1,9 @@
 'use client'
 import Markdown from 'markdown-to-jsx'
 import { useEffect } from 'react'
-import Prism from 'prismjs'
 
 import Image from 'next/image'
 import { LocalDate } from '@/lib/local-date'
-import 'highlight.js/styles/atom-one-dark.css'
 import hljs from 'highlight.js'
 
 export const ArticleBody = ({ content, frontmatter }) => {

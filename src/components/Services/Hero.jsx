@@ -7,7 +7,7 @@ const monserrat = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const Hero = () => {
     return (
-        <header className="mt-16 container mx-auto px-2 lg:w-[1114px] lg:px-0 lg:grid lg:grid-cols-2 gap-4 place-items-center lg:h-[600px] z-20">
+        <header className="mt-16 container mx-auto px-2 lg:w-[1114px] lg:px-0 lg:grid lg:grid-cols-2 gap-4 place-items-center lg:h-[700px] z-20">
             <section className="pt-16 lg:pt-0">
                 <h1
                     className={`${monserrat.className} text-3xl uppercase font-bold lg:text-5xl text-dark-700 dark:text-dark-200`}
@@ -38,25 +38,31 @@ export const Hero = () => {
             </section>
             <section className="flex mt-14 justify-center">
                 <div className="bg-crusta-500 dark:bg-crusta-500 rounded-xl shadow-lg px-1 md:px-4 py-3 md:py-6 -rotate-12  hover:scale-125 hover:z-10 transition-transform w-28 md:w-48 relative left-3">
-                    <img src="/images/building_websites.svg" alt="Ilustración desarrollo web" />
-                    <h2 className="font-bold text-dark-50 my-2 text-center md:text-left">Corporativa</h2>
-                    <p className="hidden md:block text-xs text-dark-50">
-                        Ideal para emprendedores, pequeñas empresas e instituciones.
-                    </p>
+                    <a href="#web-corporativa">
+                        <img src="/images/building_websites.svg" alt="Ilustración desarrollo web" />
+                        <h2 className="font-bold text-dark-50 my-2 text-center md:text-left">Corporativa</h2>
+                        <p className="hidden md:block text-xs text-dark-50">
+                            Ideal para emprendedores, pequeñas empresas e instituciones.
+                        </p>
+                    </a>
                 </div>
                 <div className="bg-primary-500 dark:bg-primary-500 rounded-xl shadow-lg px-1 md:px-4 py-3 md:py-6 -translate-y-6 hover:scale-125 hover:z-10 transition-transform w-28 md:w-48 relative ">
-                    <img src="/images/web_shopping.svg" alt="Ilustración e-commerce" />
-                    <h2 className="font-bold text-dark-50 my-2 text-center md:text-left">E-commerce</h2>
-                    <p className="hidden md:block text-xs text-dark-50">
-                        Facilita la vida de tus clientes permitiendoles realizar sus compras por internet.
-                    </p>
+                    <a href="#tienda-en-linea">
+                        <img src="/images/web_shopping.svg" alt="Ilustración e-commerce" />
+                        <h2 className="font-bold text-dark-50 my-2 text-center md:text-left">E-commerce</h2>
+                        <p className="hidden md:block text-xs text-dark-50">
+                            Facilita la vida de tus clientes permitiendoles realizar sus compras por internet.
+                        </p>
+                    </a>
                 </div>
                 <div className="bg-crusta-500 dark:bg-crusta-500 rounded-xl shadow-lg px-1 md:px-4 py-3 md:py-6 rotate-12  hover:scale-125 hover:z-10 transition-transform w-28 md:w-48 relative right-3">
-                    <img src="/images/web_developer.svg" alt="Ilustración programador" />
-                    <h2 className="font-bold text-dark-50 my-2 text-center md:text-left">A la medida</h2>
-                    <p className="hidden md:block text-xs text-dark-50">
-                        Lleva tus procesos al siguiente nivel con soluciones de automatización en la web.
-                    </p>
+                    <a href="#software-a-la-medida">
+                        <img src="/images/web_developer.svg" alt="Ilustración programador" />
+                        <h2 className="font-bold text-dark-50 my-2 text-center md:text-left">A la medida</h2>
+                        <p className="hidden md:block text-xs text-dark-50">
+                            Lleva tus procesos al siguiente nivel con soluciones de automatización en la web.
+                        </p>
+                    </a>
                 </div>
             </section>
         </header>
