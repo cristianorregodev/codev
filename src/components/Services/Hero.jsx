@@ -7,7 +7,7 @@ const monserrat = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const Hero = () => {
     return (
-        <header className="mt-16 container mx-auto px-2 lg:w-[1114px] lg:px-0 lg:grid lg:grid-cols-2 gap-4 place-items-center lg:h-[700px] z-20">
+        <header className="mt-16 container mx-auto px-2 lg:w-[1114px] lg:px-0 lg:grid lg:grid-cols-2 gap-4 place-items-center lg:h-[640px] z-20">
             <section className="pt-16 lg:pt-0">
                 <h1
                     className={`${monserrat.className} text-3xl uppercase font-bold lg:text-5xl text-dark-700 dark:text-dark-200`}

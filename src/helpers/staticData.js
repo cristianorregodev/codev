@@ -118,19 +118,19 @@ export const MY_SERVICES = [
                 title: 'Colraices',
             },
             {
-                image: '/images/colraices/cover.webp',
+                image: '/images/agencia-momentum/cover.webp',
                 url: 'https://agenciamomentum.co',
                 title: 'Momentum',
             },
             {
-                image: '/images/colraices/cover.webp',
+                image: '/images/diocesano/cover.webp',
                 url: 'https://diocesanosantamaria.edu.co',
                 title: 'Diocesano SM',
             },
             {
-                image: '/images/colraices/cover.webp',
-                url: 'https://valentiaenergía.com',
-                title: 'ValentiaEnergia',
+                image: '/images/leasing/cover.webp',
+                url: 'https://colraices.com/leasingdavivienda',
+                title: 'Leasing Davivienda',
             },
         ],
         button: {
@@ -157,24 +157,19 @@ export const MY_SERVICES = [
         ],
         projects: [
             {
-                image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
-                title: 'Colraices',
+                image: '/images/dotase/cover.webp',
+                url: 'https://dotase.com',
+                title: 'Dotase',
             },
             {
-                image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
-                title: 'Colraices2',
+                image: '/images/valentia/cover.webp',
+                url: 'https://valentiaenergía.com',
+                title: 'Valentia Energía',
             },
             {
-                image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
-                title: 'Colraices3',
-            },
-            {
-                image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
-                title: 'Colraices4',
+                image: '/images/vitrina/cover.webp',
+                url: 'https://colraices.com/casas-apartamentos-colombia-desde-el-exterior',
+                title: 'Portal inmobiliario',
             },
         ],
         button: {
@@ -202,23 +197,18 @@ export const MY_SERVICES = [
         projects: [
             {
                 image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
+                url: 'https://agenciamomentum.co:4501',
                 title: 'Colraices',
             },
             {
-                image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
-                title: 'Colraices2',
+                image: '/images/cms-vc/cover.webp',
+                url: 'https://vc.colraices.com',
+                title: 'Gestor de inmuebles',
             },
             {
-                image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
-                title: 'Colraices3',
-            },
-            {
-                image: '/images/momentum/cover.webp',
-                url: 'https:/colraices.com',
-                title: 'Colraices4',
+                image: '/images/bluone/cover.webp',
+                url: 'https://one.blubank.co',
+                title: 'BluOne',
             },
         ],
         button: {
