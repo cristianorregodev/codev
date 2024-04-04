@@ -41,13 +41,22 @@ export const ServiceItem = ({ service }) => {
                     ))}
                 </ul>
             </section>
-            <aside className="min-w-fit">
+            <aside className="min-w-fit mt-8 md:mt-0">
+                <h4
+                    className={` mb-4 font-bold text-lg md:text-2xl ${
+                        service?.reverse
+                            ? 'text-primary-600 dark:text-primary-400'
+                            : 'text-crusta-700 dark:text-crusta-400'
+                    }`}
+                >
+                    Proyectos
+                </h4>
                 <div className="grid grid-cols-2 gap-4  place-content-center mb-8">
                     {service?.projects.map((project) => (
                         <a
                             href={project?.url}
                             key={project.title}
-                            className="relative group hover:bg-dark-950 rounded-lg"
+                            className="relative group hover:bg-dark-950 rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
                             target="_blank"
                         >
                             <img
@@ -57,7 +66,7 @@ export const ServiceItem = ({ service }) => {
                                 width={240}
                                 height={210}
                                 loading="lazy"
-                                className=" rounded-lg object-cover group-hover:opacity-50   transition-opacity"
+                                className=" rounded-lg object-cover group-hover:opacity-50  transition-all"
                             />
                             <span className="absolute m-auto top-4 right-4   text-sm font-bold hidden group-hover:flex transition-all items-center gap-2 text-white">
                                 {project?.title} <ExternalLinkIcon className="size-4" />

@@ -97,6 +97,9 @@ export const Navbar = () => {
                             <NavLink label={'Experiencia'} link={'/#experience'} action={showNavBar} />
                         </li>
                         <li className="text-center">
+                            <NavLink label={'Desarrollo web'} link={'/services'} action={showNavBar} />
+                        </li>
+                        <li className="text-center">
                             <NavLink label={'Blog'} link={'/posts'} action={showNavBar} />
                         </li>
                     </ul>
@@ -117,14 +120,6 @@ export const Navbar = () => {
                                 target="_blank"
                             >
                                 <FaGithub />
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-dark-700 hover:text-dark-900 dark:text-dark-200 dark:hover:text-dark-50 transition-colors duration-300"
-                            >
-                                <FaYoutube />
                             </a>
                         </li>
                     </ul>
