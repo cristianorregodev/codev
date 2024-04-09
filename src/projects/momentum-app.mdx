@@ -1,0 +1,46 @@
+---
+title: 'Momentum Generative App'
+category: 'Fullstack'
+date: '2023-02-17'
+excerpt: Agencia Momentum es una empresa que se dedica a brindar soluciones de marketing digital, en su proceso de innovación se decide crear una aplicación web cuyo principal objetivo es optimizar el proceso creativo de generación de copys e ilustraciones gracias a la integración de herramientas de IA como GPT-3, Dall-E-2 o Codex.
+cover: '/images/momentum/cover.webp'
+stack:
+    - NodeJS
+    - Express.js
+    - ReactJS
+    - SASS
+    - MongoDB
+link: 'https://colraices.com'
+---
+
+La aplicación está pensada para que los usuarios puedan generar textos de copys, ilustraciones y piezas de código haciendo uso de herramientas de la inteligencia artificial, para ello se diseña y construye una interfaz que le permite al usuario tener las 3 herramientas en un mismo lugar y permitiendole tener un historial de sus consultas.
+
+El proyecto está construido bajo el stack MERN usando ReactJS para el desarrollo de la interfaz y NodeJS para la construcción del backend. Se emplean algunos de las herramientas principales de ReactJS como Context API, los hooks y enrutamiento por medio de React Router, dispone de secciones como perfil de usuario, historial, generar textos e imágenes. La comunicación con el backend es mediante tecnología API.
+
+## Funcionalidades
+
+Esta aplicación consiste en un login sencillo mediante el cual accede a las principales de funciones que le permiten hacer consultas a modelos de inteligencia articial.
+
+-   **Autenticación**: Sistema que permite al usuario crear una nueva cuenta o inciar sesión con una cuenta existente. La validación de usuario es mediante JWT con una duración de 12 horas según políticas de la agencia.
+-   **Generar textos**: Dispone de una interfaz sencilla para la generación de texto. Mediante un input único el usuario digita el promt que requiere para ideas de copy y gracias al modelo GPT-3.5 se generan las recomendaciones.
+-   **Generar imágenes**: Con una interfaz similar a la anterior variando en la presentación de resultados, esta UI esta conectado Dall-E-2 donde el usuario mediante texto brinda las instrucciones necesarios para generar imágenes.
+
+## Vista previa (Screenshots)
+
+<div class="mdx-gallery">
+    <img src="/images/momentum/responsive.webp" alt="Vista previa de la interfaz" loading="lazy" />
+    <br />
+    <img src="/images/momentum/screenshot.webp" alt="Vista previa de la interfaz" loading="lazy" />
+    <br />
+    <img src="/images/momentum/mockup.webp" alt="Vista previa de la interfaz" loading="lazy" />
+</div>
+
+## Tecnologías
+
+| Tecnología | Uso / Implementación                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------ |
+| NodeJS     | Entorno de ejecución para JavaScript del lado del servidor                                       |
+| Express.js | Framework para el desarrollo ágil de API con NodeJS                                              |
+| ReactJS    | Para la construcción de componentes dinámicos y reutilización de los mismos.                     |
+| SASS       | Se uso para extender la funcionalidad de CSS permitiendo la modularización del código            |
+| API        | Consumo de APIs de servicios externos para la visualización del contenido dinámico como el blog. |

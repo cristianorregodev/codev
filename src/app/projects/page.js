@@ -13,8 +13,9 @@ export default function ProjectsPage() {
     const projects = getAllPostsMetadata(process.env.PROJECTS_PATH)
     return (
         <>
-            <Banner title={'Portafolio de proyectos'} />
-            <section className="mt-16 container mx-auto px-2 lg:w-[740px] grid gap-4 place-items-center md:grid-cols-2 md:gap-6 ">
+            <Banner title={'Portafolio de proyectos'} maxWith="lg:w-[900px]" />
+
+            <section className="mt-16 container mx-auto px-2 md:px-0 lg:w-[900px]  ">
                 <Suspense>
                     <ListOfProjects projects={projects} />
                 </Suspense>

@@ -218,3 +218,9 @@ export const MY_SERVICES = [
         reverse: false,
     },
 ]
+
+export const PROJECTS_CATEGORIES = {
+    frontend: 'Frontend',
+    backend: 'Backend',
+    fullstack: 'Fullstack',
+}

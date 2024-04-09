@@ -22,16 +22,18 @@ export const ProjectCard = ({ project }) => {
             </div>
 
             <div className="p-5">
-                <h5 className="mb-2 text-xl font-bold tracking-tight text-primary-600 dark:text-primary-400">
+                <h5 className="mb-2 text-lg font-bold tracking-tight text-primary-600 dark:text-primary-400">
                     {project.title}
                 </h5>
-                <p className="mb-3 font-normal text-dark-700 dark:text-dark-200 line-clamp-3">{project?.excerpt}</p>
+                <p className="mb-3 text-sm font-normal text-dark-700 dark:text-dark-200 line-clamp-3">
+                    {project?.excerpt}
+                </p>
 
                 <ul className="flex gap-1 flex-wrap  text-dark-700 dark:text-dark-200 mb-2 text-sm">
                     {project?.stack.map((item, idx) => (
                         <li
                             key={idx}
-                            className="rounded-md border border-dark-200 dark:border-dark-800 bg-dark-300/60 dark:bg-dark-800 px-2 py-1 font-mono text-xs"
+                            className="rounded-xl border border-dark-200 dark:border-dark-800 bg-dark-300/60 dark:bg-dark-800 px-1 font-mono text-xs"
                         >
                             {' '}
                             {item}
