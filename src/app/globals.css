@@ -47,6 +47,7 @@ body {
     border-radius: 8px;
     width: 100%;
     box-shadow: 4px 10px 10px -3px rgba(117, 117, 117, 0.1);
+    margin-block: 10px;
 }
 
 #article-body pre {

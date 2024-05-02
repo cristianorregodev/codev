@@ -1,0 +1,82 @@
+---
+title: 'Configuración de git: instalación y configuración'
+date: '2024-05-01'
+description: >-
+    Aprende lo básico y necesario para configurar GIT y manten el control de versiones de tu código ordenado y actualizado.
+toc: true
+tags:
+    - git
+cover: '/images/posts/como-crear-un-spínner-con-css.svg'
+author: '@cristianorregodev'
+---
+
+Como desarrolladores de software, es importante utilizar un sistema de control de versiones para administrar nuestro código y trabajar junto a un equipo. Git es la herramienta de control de versiones más popular en la actualidad. 👨‍💻
+
+🚀 En esta guía, iremos a través de los pasos para instalar y configurar Git en nuestra computadora, para que podamos comenzar a utilizar sus beneficios de inmediato.
+
+## Paso 1: Descarga e instalación ✅
+
+1. Visita el **<a href="https://git-scm.com/" target="_blank">sitio web oficial de Git</a>**
+2. Descarga la versión correspondiente a tu sistema operativo (Windows, macOS, Linux).
+3. Ejecuta el programa de instalación descargado y sigue las instrucciones que aparecen en pantalla para completar la instalación.
+
+## Paso 2: Configuración de identidad 🔐
+
+Puedes encontrar todos los elementos de configuración disponibles en **<a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration" target="_blank">Configuración de Git</a>**
+
+1. Abre la terminal (CMD o Símbolo del sistema de Windows)
+2. Configura tu nombre de usuario usando el siguiente comando en la terminal:
+
+```bash
+git config --global user.name "Tu nombre de usuario"
+```
+
+3. Configura tu dirección de correo electrónico con el comando:
+
+```bash
+git config --global user.email "tu@correo.com"
+```
+
+## Paso 3: Configuración de ajustes
+
+Estos son sólo dos ejemplos simples de lo que puedes configurar. Git ofrece muchas formas de personalizar su configuración según cómo te guste trabajar. ¡No dudes en explorar las posibilidades!
+
+-   Configura el color de salida de la consola con:
+
+```bash
+git config --global color.ui auto
+```
+
+-   Configura el editor de texto predeterminado para mensajes de confirmación (reemplaza "your_editor" con tu editor preferido):
+
+```bash
+git config --global core.editor "your_editor"
+```
+
+## Bonus 🎁
+
+El siguiente paso es encontrar un lugar para mantener tu código seguro o porque no, un lugar en donde puedas manipular el código en companía de un grupo de desarrolladores. Para ello hay alternativas como GitHub, GitLab, entre otros.
+
+-   Crea tu cuenta de **<a href="https://github.com/" target="_blank">GutHub</a>**
+-   Crea un repositorio:
+    <img
+        src="https://res.cloudinary.com/dvjzp6scj/image/upload/v1714658179/posts/oqc9snjp3wyv2j2e0uzb.gif"
+        alt="Ilustración UI creación nuevo repositorio"
+    />
+-   Sigue los pasos del respositorio para subir tu proyecto a GitHub:
+
+    ```bash
+    # Abre la carpeta raíz de tu proyecto en la terminal
+    cd "ruta-del-proyecto"
+    ```
+
+-   Una vez dentro del proyecto ejecutamos los siguientes comandos:
+
+    ```bash
+    git init #Inicializa el repositorio de git
+    git add . #Agrega los archivos al stage area
+    git commit -m "first commit" #Confirma los cambios
+    git branch -M main #Cambia el nombre de la rama
+    git remote add origin <URL del repositorio> #Agrega el respositorio remoto (el que creaste en GitHub)
+    git push -u origin main #Envía los cambios al repositorio remoto
+    ```
